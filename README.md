@@ -1,3 +1,3 @@
-# CS2105-Project
+# CS2102-Project
 
-This is group 4's CS2105 project for AY15/16!
+This is group 4's CS2102 project for AY15/16!
