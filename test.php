@@ -10,7 +10,7 @@
     <h1 id="title">Crowdfunding 'R' Us</h1>
     <h2 id="subtitle">Please Give Us Money</h2>
 </div>
-<br></br>
+
 <table>
     <thead>
     <tr>
