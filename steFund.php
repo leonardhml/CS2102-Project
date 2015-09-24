@@ -15,6 +15,7 @@ include 'config.php';
     <h2 id="subtitle">Please Give Us Money</h2>
 </div>
 <div class="menu">
+    <a href="updateUser.php">Update users</a><br>
     <a href="insert.php">Insert a user</a>
 
 </div>
