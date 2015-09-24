@@ -1,19 +1,23 @@
 <html>
 
 <head>
-    <title>Demo Online Book Catalog</title>
+    <title>SteFund - Your one-stop shop for all things crowdfunding!</title>
     <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 </head>
 
 <?php
 include 'config.php';
 ?>
+
 <body>
 <div class="header">
-    <h1 id="title">Crowdfunding 'R' Us</h1>
+    <h1 id="title">SteFund inc.</h1>
     <h2 id="subtitle">Please Give Us Money</h2>
 </div>
+<div class="menu">
+    <a href="insert.php">Insert a user</a>
 
+</div>
 <table>
     <thead>
     <tr>
@@ -25,39 +29,34 @@ include 'config.php';
         <td id="form" >
             <form>
                 Title: <input type="text" name="Title" id="formTitle">
-                <select name="Language"> <option value="">Select Language</option>
-                    <?php
-                    $sql = "SELECT DISTINCT language FROM book";
-                    $stid = oci_parse($dbh, $sql);
-                    oci_execute($stid, OCI_DEFAULT);
-                    while($row = oci_fetch_array($stid)){
-                        echo "<option value=\"".$row["LANGUAGE"]."\">".$row["LANGUAGE"]."</option><br>";
-                    }
-                    oci_free_statement($stid);
-                    ?>
-                </select>
-                <input type="radio" name="Format" id="Format1" value="hardcover">hardcover
-                <input type="radio" name="Format" id="Format2" value="paperback">paperback
                 <input type="submit" name="formSubmit" value="Search" >
             </form>
             <?php
             if(isset($_GET['formSubmit']))
             {
-                $sql = "SELECT Title, Authors FROM Book WHERE Title like '%".$_GET['Title']."%' AND Language='".$_GET['Language']."' AND Format='".$_GET['Format']."'";
+                $sql = "SELECT title, in_charge, start_date, end_date, target, raised, description FROM proposed_project WHERE title like '%".$_GET['Title']."%'";
                 echo "<b>SQL: </b>".$sql."<br><br>";
                 $stid = oci_parse($dbh, $sql);
                 oci_execute($stid, OCI_DEFAULT);
                 echo "<table border=\"1\" >
-            <col width=\"75%\">
-            <col width=\"25%\">
             <tr>
                 <th>Title</th>
-                <th>Authors</th>
+                <th>Organisation</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Target Goal</th>
+                <th>Raised</th>
+                <th>Description</th>
             </tr>";
                 while($row = oci_fetch_array($stid)) {
                     echo "<tr>";
                     echo "<td>" . $row[0] . "</td>";
                     echo "<td>" . $row[1] . "</td>";
+                    echo "<td>" . $row[2] . "</td>";
+                    echo "<td>" . $row[3] . "</td>";
+                    echo "<td>" . $row[4] . "</td>";
+                    echo "<td>" . $row[5] . "</td>";
+                    echo "<td>" . $row[6] . "</td>";
                     echo "</tr>";
                 }
                 echo "</table>";

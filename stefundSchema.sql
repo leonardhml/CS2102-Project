@@ -13,19 +13,19 @@ word VARCHAR(32) PRIMARY KEY
 );
 
 CREATE TABLE proposed_project (
-target NUMBER(*,2) NOT NULL CHECK(target > 0),
+title VARCHAR(64),
+in_charge VARCHAR(64),
 start_date DATE DEFAULT SYSDATE NOT NULL,
 end_date DATE DEFAULT '30-12-9999' NOT NULL,
 proposal_date DATE NOT NULL,
 description VARCHAR(512),
-raised NUMBER(*,2) DEFAULT 0 NOT NULL,
-is_paidAd INT NOT NULL CHECK (is_paidAd = 0 OR is_paidAd = 1),
-title VARCHAR(64),
-in_charge VARCHAR(64),
 proposer VARCHAR(128) REFERENCES member(email) ON DELETE CASCADE,
-PRIMARY KEY (title, in_charge),
+target NUMBER(*, 2) NOT NULL CHECK(target > 0),
+raised NUMBER(*, 2) DEFAULT 0 NOT NULL,
 tag VARCHAR(32) REFERENCES tag(word) ON DELETE CASCADE,
 bank_acct VARCHAR(32) NOT NULL,
+is_paidAd INT NOT NULL CHECK (is_paidAd = 0 OR is_paidAd = 1),
+PRIMARY KEY (title, in_charge),
 CHECK (proposal_date <= start_date AND end_date >= start_date)
 );
 

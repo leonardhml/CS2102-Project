@@ -1,13 +1,16 @@
 
 body {
-    font-family: fantasy, cursive;
-    font-size: large;
+    font-family: serif;
 }
 .header {
     text-align: center;
     background-color: coral;
     border-radius: 10px;
     border: solid 2px black;
+}
+
+.menu {
+    text-align: right;
 }
 
 table, td, th {
