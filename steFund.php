@@ -53,19 +53,25 @@ include 'config.php';
                     <span class="icon-bar"></span>
                 </button>
                 <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">SteFund inc.</a>
+                <a class="navbar-brand" href="steFund.php">SteFund inc.</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="steFund.php">Home</a>
                     </li>
                     <li>
                         <a href="about.html">About</a>
                     </li>
                     <li>
                         <a href="blog.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="insert.php">Insert a user</a>
+                    </li>
+                    <li>
+                        <a href="updateUser.php">Update users</a><br>
                     </li>
                     <li>
                         <a href="contact.html">Contact Us</a>
@@ -114,11 +120,11 @@ include 'config.php';
                     <h2 class="brand-before">
                         <small>Welcome to</small>
                     </h2>
-                    <h1 class="brand-name">Business Casual</h1>
+                    <h1 class="brand-name">SteFund</h1>
                     <hr class="tagline-divider">
                     <h2>
                         <small>By
-                            <strong>Start Bootstrap</strong>
+                            <strong>Bressan Fanclub CS2102</strong>
                         </small>
                     </h2>
                 </div>
@@ -235,6 +241,6 @@ include 'config.php';
         ?>
 
     </table>
-    
+
 </body>
 </html>
