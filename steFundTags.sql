@@ -13,7 +13,7 @@ INSERT INTO TAG (WORD)
 VALUES ('romance');
 
 INSERT INTO TAG (WORD) 
-VALUES ('living');
+VALUES ('lifestyle');
 
 INSERT INTO TAG (WORD) 
 VALUES ('outdoors');
@@ -32,5 +32,11 @@ VALUES ('medical');
 
 INSERT INTO TAG (WORD) 
 VALUES ('entertainment');
+
+INSERT INTO TAG (WORD) 
+VALUES ('hobby');
+
+INSERT INTO TAG (WORD) 
+VALUES ('interest');
 
 -- Import Data into table TAG from file C:\Users\leona_000\Desktop\CS2102\CS2102-Project\database.xlsx . Task successful and sent to worksheet.

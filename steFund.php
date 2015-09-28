@@ -36,10 +36,9 @@ include 'config.php';
             if(isset($_GET['formSubmit']))
             {
                 $sql = "SELECT title, in_charge, start_date, end_date, target, raised, description FROM proposed_project WHERE title like '%".$_GET['Title']."%'";
-                echo "<b>SQL: </b>".$sql."<br><br>";
                 $stid = oci_parse($dbh, $sql);
                 oci_execute($stid, OCI_DEFAULT);
-                echo "<table border=\"1\" >
+                echo "<table id=\"results\" >
             <tr>
                 <th>Title</th>
                 <th>Organisation</th>
