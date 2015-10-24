@@ -193,109 +193,6 @@
 }
 
 
-
-
-
-/* Portfolio Grid and Hover Effects
-
-.grid {
-	padding: 20px 20px 100px 20px;
-	max-width: 1300px;
-	margin: 0 auto;
-	list-style: none;
-	text-align: left;
-}
-
-.grid figure {
-	margin: 0;
-	position: relative;
-	margin-top:20px;
-}
-
-.grid figure img {
-	max-width: 100%;
-	display: block;
-	position: relative;
-}
-
-.grid figcaption {
-	position: absolute;
-	top: 0;
-	left: 0;
-	padding: 20px;
-	background: #000;
-	color: #ed4e6e;
-}
-
-.grid figcaption h3 {
-	font-size:18px;
-	text-transform:uppercase;
-	margin: 0;
-	padding: 0;
-	color: #fff;
-}
-
-.grid figcaption a {
-	text-align: center;
-	padding: 5px 10px;
-	border-radius: 0;
-	display: inline-block;
-	background: #ed4e6e;
-	color: #fff;
-}
-
-
-.cs-style-3 figure {
-	overflow: hidden;
-}
-
-.cs-style-3 figure img {
-	-webkit-transition: -webkit-transform 0.4s;
-	-moz-transition: -moz-transform 0.4s;
-	transition: transform 0.4s;
-}
-
-.no-touch .cs-style-3 figure:hover img,
-.cs-style-3 figure.cs-hover img {
-	-webkit-transform: translateY(-50px);
-	-moz-transform: translateY(-50px);
-	-ms-transform: translateY(-50px);
-	transform: translateY(-50px);
-}
-
-.cs-style-3 figcaption {
-	height: 80px;
-	width: 100%;
-	top: auto;
-	bottom: 0;
-	opacity: 0;
-	-webkit-transform: translateY(100%);
-	-moz-transform: translateY(100%);
-	-ms-transform: translateY(100%);
-	transform: translateY(100%);
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s 0.3s;
-	-moz-transition: -moz-transform 0.4s, opacity 0.1s 0.3s;
-	transition: transform 0.4s, opacity 0.1s 0.3s;
-}
-
-.no-touch .cs-style-3 figure:hover figcaption,
-.cs-style-3 figure.cs-hover figcaption {
-	opacity: 1;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	-ms-transform: translateY(0px);
-	transform: translateY(0px);
-	-webkit-transition: -webkit-transform 0.4s, opacity 0.1s;
-	-moz-transition: -moz-transform 0.4s, opacity 0.1s;
-	transition: transform 0.4s, opacity 0.1s;
-}
-
-.cs-style-3 figcaption a {
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
-}*/
-
 /* Caption Style 2 */
 .cs-style-2 figure img {
 	z-index: 10;
@@ -342,4 +239,18 @@
 
 .navbar-brand {
   padding: 10px;
+}
+
+#tagcloud{
+        color: #dda0dd;
+        font-family: Arial, verdana, sans-serif;
+        width:600px;
+        border: 1px solid black;
+    text-align: center;
+}
+
+#tagcloud a{
+        color: blue;
+        text-decoration: none;
+        text-transform: capitalize;
 }

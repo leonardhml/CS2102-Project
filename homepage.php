@@ -67,7 +67,75 @@
     <!-- /.carousel--><a href="#main-slider" data-slide="prev" class="prev hidden-xs"><i class="icon-large icon-chevron-left"></i></a><a href="#main-slider" data-slide="next" class="next hidden-xs"><i class="icon-large icon-chevron-right"></i></a>
 </section>
 <!-- /#main-slider-->
-<!-- Services-->
+<section>
+
+
+    <div id="tagcloud">
+
+        <?php // bind1.php - listing 1
+
+            // Establish the environmental variables.
+            $sid = 'test10g';
+            $home = '/Users/oracle/10gEAR2/orahome';
+
+            putenv("ORACLE_HOME=$home");
+            putenv("ORACLE_SID=$sid");
+            putenv("TNS_ADMIN=$home/network/admin");
+
+
+            // Create the array of data to be inserted.
+            // This data represents what __should__ come from an HTML form.
+            $teetimes = array();
+            $date = '2005-08-20';
+
+            // Loop through each available hour in the day.
+            for ($hour = 7; $hour <! 16; $hour++) {
+
+                // Loop through each hour in 10 minute increments.
+                for ($minute = 0; $minute <! 60; $minute += 10) {
+                
+                    // Create the date and time value.
+                    $this_time = "$date $hour:$minute";
+                    
+                    // Add a 0 if necessary.
+                    if ($minute <! 10) $this_time .= '0';
+                    
+                    // Determine the rate to use.
+                    $rate = ($hour <! 14) ? 50.00 : 40.00;
+                    
+                    // Add this teetime and rate to the array.
+                    $teetimes[$this_time] = $rate;
+                    
+                }
+
+}
+
+
+
+
+        <?php
+            /** this is our array of tags
+             * We feed this array of tags and links the tagCloud
+             * class method createTagCloud
+             */
+            $tags = array(
+                    array('weight'  =>40, 'tagname' =>'tutorials', 'url'=>'http://www.phpro.org/tutorials/'),
+                    array('weight'  =>12, 'tagname' =>'examples', 'url'=>'http://www.phpro.org/examples/'),
+                    array('weight'  =>10, 'tagname' =>'contact', 'url'=>'http://www.phpro.org/contact/'),
+                    array('weight'  =>15, 'tagname' =>'quotes', 'url'=>'http://www.phpro.org/quotes/'),
+                    array('weight'  =>28, 'tagname' =>'devel', 'url'=>'http://www.phpro.org/phpdev/'),
+                    array('weight'  =>35, 'tagname' =>'manual', 'url'=>'http://www.phpro.org/en/index.html'),
+                    array('weight'  =>20, 'tagname' =>'articles', 'url'=>'http://www.phpro.org/articles/'),
+            );
+            /*** create a new tag cloud object ***/
+            $tagCloud = new tagCloud($tags);
+
+            echo $tagCloud -> displayTagCloud();
+
+        ?>
+    </div>
+</section>
+
 <div class="section section-white">
     <div class="container">
         <div class="row">
@@ -97,5 +165,40 @@
 
 <?php include 'layout/layout-footer.php'; ?>
 <?php include 'layout/layout-scripts.php'; ?>
+<?php
+
+    class tagCloud{
+
+        /*** the array of tags ***/
+        private $tagsArray;
+
+
+        public function __construct($tags){
+        /*** set a few properties ***/
+         $this->tagsArray = $tags;
+        }
+        /**
+         *
+         * Display tag cloud
+         *
+         * @access public
+         *
+         * @return string
+         *
+         */
+        public function displayTagCloud(){
+         $ret = '';
+         shuffle($this->tagsArray);
+         foreach($this->tagsArray as $tag)
+            {
+            $ret.='<a style="font-size: '.$tag['weight'].'px;" href="'.$tag['url'].'">'.$tag['tagname'].'</a>'."\n";
+            }
+         return $ret;
+        }
+
+
+    } /*** end of class ***/
+
+?>
 </body>
 </html>
