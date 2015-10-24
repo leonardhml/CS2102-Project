@@ -26,6 +26,7 @@ function get_projects(){
                     (SERVICE_NAME = sid3.comp.nus.edu.sg)
                     )
                 )');
+
     $projectTitle = $_POST["projTitle"];
     $sql = "SELECT * FROM proposed_project WHERE title LIKE '%".$projectTitle."%'";
    // echo $sql;
@@ -33,14 +34,14 @@ function get_projects(){
     oci_execute($res, OCI_DEFAULT);
     $return_array = array();
     while ($row = oci_fetch_array($res, OCI_BOTH)) {
-        $row_array['title'] = $row[0];
-        $row_array['in_charge'] = $row['IN_CHARGE'];
-        $row_array['proposer'] = $row['PROPOSER'];
-        $row_array['start_date'] = $row['START_DATE'];
-        $row_array['end_date'] = $row['END_DATE'];
-        $row_array['target'] = $row['TARGET'];
-        $row_array['raised'] = $row['RAISED'];
-        $row_array['description'] = $row['DESCRIPTION'];
+        $row_array['Title'] = $row[0];
+        $row_array['In Charge'] = $row['IN_CHARGE'];
+        $row_array['Proposer'] = $row['PROPOSER'];
+        $row_array['Start Date'] = $row['START_DATE'];
+        $row_array['End Date'] = $row['END_DATE'];
+        $row_array['Target'] = $row['TARGET'];
+        $row_array['Raised'] = $row['RAISED'];
+        $row_array['Description'] = $row['DESCRIPTION'];
         array_push($return_array, $row_array);
     }
     //Do what you need to do with the info. The following are some examples.

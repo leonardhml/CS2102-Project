@@ -13,4 +13,5 @@
     <link rel="stylesheet" href="css/icomoon-social.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <?php include 'layout-scripts.php';?>
 </head>

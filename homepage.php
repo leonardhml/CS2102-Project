@@ -21,7 +21,7 @@
                                 <h2 class="animation animated-item-1">SteFund</h2>
                                 <p class="animation animated-item-2">Where Your Dreams Come True!</p>
                                 <div id="dest-box" class="animation animated-item-3">
-                                    <form action="/postdest" method="POST" class="form-dest">
+                                    <form action="projects.php" method="POST" class="form-dest">
                                         <div class="form-group">
                                             <input id="destinput" type="text" value="" name="projTitle" placeholder="Search for a Project" autofocus="autofocus" class="form-control col-md-10 home-input"/>
                                             <button type="submit" class="btn btn-primary btn-wm col-md-2 pull-right">Enter</button>
@@ -96,6 +96,5 @@
 <script type="text/javascript" src="js/homepage.js"></script>
 
 <?php include 'layout/layout-footer.php'; ?>
-<?php include 'layout/layout-scripts.php'; ?>
 </body>
 </html>
