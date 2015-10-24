@@ -30,7 +30,7 @@ CHECK (proposal_date <= start_date AND end_date >= start_date)
 );
 
 CREATE TABLE fund_record (
-fund_date_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+fund_date_time TIMESTAMP DEFAULT LOCALTIMESTAMP NOT NULL,
 amount NUMBER(*,2) NOT NULL,
 message VARCHAR(256),
 id INT PRIMARY KEY,
@@ -60,3 +60,9 @@ FOREIGN KEY (voter) REFERENCES member(email) ON DELETE CASCADE,
 FOREIGN KEY (votee) REFERENCES member(email) ON DELETE CASCADE,
 CHECK (voter <> votee)
 );
+
+CREATE SEQUENCE seq_ID
+MINVALUE 1
+START WITH 1
+INCREMENT BY 1
+CACHE 10;
