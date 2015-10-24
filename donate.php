@@ -33,7 +33,7 @@ function donate(){
     $amount = $_POST["amount"];
     $donor = $_SESSION['login_user'];
     $sql = "INSERT INTO fund_record VALUES(LOCALTIMESTAMP, ".$amount.", '', seq_ID.nextval, '".$donor."', '".$projectTitle."', '".$projectInCharge."')";
-    echo $sql;
+   // echo $sql;
     $res = oci_parse($dbh, $sql);
     oci_execute($res, OCI_COMMIT_ON_SUCCESS);
     $sql = "UPDATE proposed_project SET raised = raised + ".$amount." WHERE title = '".$projectTitle."' AND in_charge = '".$projectInCharge."'";

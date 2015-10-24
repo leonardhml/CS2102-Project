@@ -168,7 +168,7 @@ oci_close($dbh);
             return false;
         });
 
-   /**     $("#donateForm").submit(function(){
+        $("#donateForm").submit(function(){
             var dataString = $(this).serialize(); //should only have 3 data: ratings, projTitle, projInCharge
             $.post('donate.php', dataString, function(data) {
                 alert("Thank you for donating!");
@@ -176,7 +176,7 @@ oci_close($dbh);
             });
 
             return false;
-        });**/
+        });
     });
 </script>
 
