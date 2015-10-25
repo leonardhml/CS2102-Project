@@ -44,7 +44,7 @@
                 );
 
                 function buildTable(data) {
-                    alert(data);
+                //    alert(data);
                     var dataJSON = jQuery.parseJSON(data);
                     var tmp = "<thead><tr>";
                     for (var header in dataJSON[0] ) {
@@ -63,7 +63,7 @@
                         tmp = tmp + "</tr>";
                     }
                     tmp = tmp + "</tbody>";
-                    alert(tmp);
+                //    alert(tmp);
                     return tmp;
                 }
 

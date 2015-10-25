@@ -60,7 +60,7 @@ oci_close($dbh);
         <div class="col-md-12">
 
             <div class="description">
-                <img class="img-responsive" src="http://placehold.it/800x300" alt="">
+                <img class="img-responsive" src="img/proj_default.jpg" alt="">
                 <div class="caption-full">
                 <!--    <h4 class="pull-right">$24.99</h4> -->
                     <h4><a href="#"><?php echo $title; ?></a>
@@ -101,12 +101,12 @@ oci_close($dbh);
                 <div class="ratings">
                     <p>
                         <?php
-                            for ($i = 1; $i < $avgRating; $i++) {
-                                echo "<span class='glyphicon glyphicon-star'></span>";
-                            }
-                            for ($i = 1; $i<5-$avgRating+1;$i++) {
-                                echo "<span class='glyphicon glyphicon-star-empty'></span>";
-                            }
+                        for ($i = 0; $i < floor($avgRating); $i++) {
+                            echo "<span class='glyphicon glyphicon-star'></span>";
+                        }
+                        for ($i = 0; $i<5-floor($avgRating);$i++) {
+                            echo "<span class='glyphicon glyphicon-star-empty'></span>";
+                        }
                         ?>
                         Rating: <?php if($avgRating) {echo $avgRating;} else {echo "0.00";} ?>/5.00 (<?php if($count) {echo $count;} else {echo "0";} ?> members voted on this project)
                     </p>

@@ -95,7 +95,7 @@ oci_close($dbh);
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+                        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="img/profile_default.png" class="img-circle img-responsive"> </div>
 
                         <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
                           <dl>
@@ -135,10 +135,10 @@ oci_close($dbh);
                                 <tr>
                                     <td>Rating:</td>
                                     <td><?php
-                                        for ($i = 1; $i < $avgRating; $i++) {
+                                        for ($i = 0; $i < floor($avgRating); $i++) {
                                             echo "<span class='glyphicon glyphicon-star'></span>";
                                         }
-                                        for ($i = 1; $i<5-$avgRating+1;$i++) {
+                                        for ($i = 0; $i<5-floor($avgRating);$i++) {
                                             echo "<span class='glyphicon glyphicon-star-empty'></span>";
                                         }
                                         ?>

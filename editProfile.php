@@ -91,7 +91,11 @@ oci_close($dbh);
                                     <tbody>
                                     <tr>
                                         <td>Email:</td>
-                                        <td><input type="text" name="email" value="<?php echo $email ?>" /></td>
+                                        <td><?php echo $email ?></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Name:</td>
+                                        <td><input type="text" name="name" value="<?php echo $name ?>" /></td>
                                     </tr>
                                     <tr>
                                         <td>Password:</td>
@@ -110,9 +114,8 @@ oci_close($dbh);
                                         <td><input type="text" name="acct" value="<?php echo $acct ?>" /></td>
                                     </tr>
                                     </tbody>
-
-                                    <button type="submit" class="btn btn-default">submit</button>
                                 </table>
+                                <button type="submit" class="btn btn-default">submit</button>
                             </form>
                         </div>
                     </div>

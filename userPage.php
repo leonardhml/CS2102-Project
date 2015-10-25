@@ -83,23 +83,14 @@ oci_close($dbh);
 
 <div class="container">
     <div class="row">
-        <div class="col-md-3  toppad  pull-right col-md-offset-3 ">
-            <A href="edit.html" >Edit Profile</A>
-
-            <A href="edit.html" >Logout</A>
-            <br>
-            <p class=" text-info">May 05,2014,03:00 pm </p>
-        </div>
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-0 toppad" >
-
-
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h1 class="panel-title"><?php echo $name; ?></h1>
                 </div>
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="http://babyinfoforyou.com/wp-content/uploads/2014/10/avatar-300x300.png" class="img-circle img-responsive"> </div>
+                        <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" src="img/profile_default.png" class="img-circle img-responsive"> </div>
 
                         <!--<div class="col-xs-10 col-sm-10 hidden-md hidden-lg"> <br>
                           <dl>
@@ -135,10 +126,10 @@ oci_close($dbh);
                                 <tr>
                                     <td>Rating:</td>
                                     <td><?php
-                                        for ($i = 1; $i < $avgRating; $i++) {
+                                        for ($i = 0; $i < floor($avgRating); $i++) {
                                             echo "<span class='glyphicon glyphicon-star'></span>";
                                         }
-                                        for ($i = 1; $i<5-$avgRating+1;$i++) {
+                                        for ($i = 0; $i<5-floor($avgRating);$i++) {
                                             echo "<span class='glyphicon glyphicon-star-empty'></span>";
                                         }
                                         ?>
