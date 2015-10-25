@@ -7,10 +7,8 @@ session_start();
 <?php include 'layout/layout-head.php'; ?>
 
 <?php
-echo print_r($_POST);
 $email = $_SESSION['login_user'];
 $sql = "SELECT * FROM member WHERE email ='".$email."'";
-echo $sql;
 $member = oci_parse($dbh, $sql);
 oci_execute($member, OCI_DEFAULT);
 

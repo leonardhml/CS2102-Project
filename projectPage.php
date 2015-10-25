@@ -7,11 +7,9 @@ session_start();
 <?php include 'layout/layout-head.php'; ?>
 
 <?php
-echo print_r($_POST);
 $title = $_POST['Title'];
 $inCharge = $_POST['In_Charge'];
 $sql = "SELECT * FROM proposed_project WHERE title ='".$title."' AND in_charge='".$inCharge."'";
-echo $sql;
 $project = oci_parse($dbh, $sql);
 oci_execute($project, OCI_DEFAULT);
 
@@ -29,7 +27,6 @@ while ($row = oci_fetch_array($project, OCI_BOTH)) {
 }
 
 $sql = "SELECT avg(rating), count(rating) FROM p_vote WHERE p_title ='".$title."' AND p_in_charge='".$inCharge."' GROUP BY p_title, p_in_charge";
-echo $sql;
 $project = oci_parse($dbh, $sql);
 oci_execute($project, OCI_DEFAULT);
 

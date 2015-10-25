@@ -36,7 +36,7 @@ session_start();
         $acct = $_POST['acct'];
         $phone = $_POST['phone'];
         $isAdmin = 0;
-        $sql = "INSERT INTO member VALUES ('".$email."', '".$name."', '".$address."', '".$password."', ".$isAdmin.", ".$acct.", '".$phone."')";
+        $sql = "INSERT INTO member VALUES ('".$email."', '".$name."', '".$address."', '".$password."', ".$isAdmin.", '".$acct."', '".$phone."')";
         echo $sql;
         $res = oci_parse($dbh, $sql);
         if (oci_execute($res, OCI_COMMIT_ON_SUCCESS)) {

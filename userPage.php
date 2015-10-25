@@ -7,10 +7,8 @@ session_start();
 <?php include 'layout/layout-head.php'; ?>
 
 <?php
-echo print_r($_POST);
 $email = $_POST['Email'];
 $sql = "SELECT * FROM member WHERE email ='".$email."'";
-echo $sql;
 $member = oci_parse($dbh, $sql);
 oci_execute($member, OCI_DEFAULT);
 
@@ -25,7 +23,6 @@ while ($row = oci_fetch_array($member, OCI_BOTH)) {
 }
 
 $sql = "SELECT avg(rating), count(rating) FROM m_vote WHERE votee='".$email."' GROUP BY votee";
-echo $sql;
 $project = oci_parse($dbh, $sql);
 oci_execute($project, OCI_DEFAULT);
 
