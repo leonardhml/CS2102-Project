@@ -4,3 +4,4 @@
 <script src="js/lib/jquery-1.11.3.js"></script>
 <script src="js/lib/bootstrap.js"></script>
 <script src="js/lib/scrolling-nav.js"></script>
+<script src="js/lib/jquery-ui.js"></script>

@@ -23,7 +23,7 @@ session_start();
             <div class="form-group">
                 <input id="projTitle" type="text" value="<?php if(isset($_POST['projTitle'])) {echo $_POST['projTitle'];} else {echo "";} ?>" name="projTitle" placeholder="Search for a Project" autofocus="autofocus" class="form-control col-md-10 home-input"/>
 
-                <button type="submit" class="btn btn-primary btn-wm col-md-2 pull-right">Enter</button>
+                <button type="submit" class="btn btn-primary btn-wm col-md-1 pull-right">Enter</button>
             </div>
         </form>
         <button type="button" id="test">click me</button>

@@ -37,8 +37,6 @@ oci_close($dbh);
 <head>
     <link rel="stylesheet" href="css/userPage.css">
     <script src="js/userPage.js"></script>
-    <link rel="stylesheet" href="css/jquery-ui.css">
-    <script src="js/lib/jquery-ui.js"></script>
     <script>
         $(function() {
             $( "#accordion" ).accordion({

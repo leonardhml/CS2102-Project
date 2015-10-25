@@ -136,7 +136,7 @@ oci_close($dbh);
                 <form class="form-inline" role="form" method="post" id="donateForm" action="donate.php">
                         <span class="form-group">
                             <label for="money">Donate to this Project:</label>
-                            <input type="number" name="amount" class="form-control" id="ratings"/>
+                            <input type="number" name="amount" min="0" class="form-control" id="ratings"/>
                             <input type="hidden" name="Title" value="<?php echo $title; ?>"/>
                             <input type="hidden" name="In_Charge" value="<?php echo $inCharge; ?>"/>
                         </span>
