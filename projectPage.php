@@ -161,12 +161,16 @@ oci_close($dbh);
         $("#ratingForm").submit(function(){
             var dataString = $(this).serialize(); //should only have 3 data: ratings, projTitle, projInCharge
             $.post('rate.php', dataString, function(data) {
-                alert("Thank you for rating!");
-                location.reload();
+                if (data) {
+                    alert("Thank you for rating!");
+                    location.reload();
+                } else {
+                    alert("You cannot rate a project twice!");
+                }
             });
 
             return false;
-        });
+        })  ;
 
         $("#donateForm").submit(function(){
             var dataString = $(this).serialize(); //should only have 3 data: ratings, projTitle, projInCharge

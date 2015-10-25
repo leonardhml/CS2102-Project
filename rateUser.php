@@ -29,11 +29,10 @@ function rate()
                     )
                 )');
 
-    $projectTitle = $_POST["Title"];
-    $projectInCharge = $_POST["In_Charge"];
+    $votee = $_POST["votee"];
     $rating = $_POST["ratings"];
     $voter = $_SESSION['login_user'];
-    $sql = "INSERT INTO p_vote VALUES(" . $rating . ", '" . $voter . "', '" . $projectTitle . "', '" . $projectInCharge . "')";
+    $sql = "INSERT INTO m_vote VALUES(" . $rating . ", '" . $voter . "', '" . $votee . "')";
     //echo $sql;
     $res = oci_parse($dbh, $sql);
     if (@oci_execute($res, OCI_COMMIT_ON_SUCCESS)) {

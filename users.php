@@ -3,13 +3,12 @@
 <?php include 'layout/config.php'; ?>
 <?php include 'layout/layout-head.php'; ?>
 <body>
-<div id="fly" style="position: absolute; top:50px; left: -50px;"><img src="img/steph0001.gif" /> </div>
 <?php include 'layout/layout-header.php'; ?>
 <div class="section section-breadcrumbs">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <h1>Projects</h1>
+                <h1>Users</h1>
             </div>
         </div>
     </div>
@@ -18,12 +17,12 @@
     <div class="container">
         <form action="" method="POST" class="form-dest">
             <div class="form-group">
-                <input id="projTitle" type="text" value="<?php if(isset($_POST['projTitle'])) {echo $_POST['projTitle'];} else {echo "";} ?>" name="projTitle" placeholder="Search for a Project" autofocus="autofocus" class="form-control col-md-10 home-input"/>
+                <input id="username" type="text" value="" name="username" placeholder="Search for a User" autofocus="autofocus" class="form-control col-md-10 home-input"/>
 
                 <button type="submit" class="btn btn-primary btn-wm col-md-2 pull-right">Enter</button>
             </div>
         </form>
-        <button type="button" id="test">click me</button>
+        <button type="button" id="test">test me</button>
     </div>
     <div class="container">
         <table class="table table-bordered" id="projectsTable">
@@ -33,12 +32,11 @@
 <script type="text/javascript">
     $("document").ready(function(event){
         $("#test").click(function() {
-            $("#fly").animate({left: "+=500", top: "+=250"}, 3000);
-
+            alert("jqueryworks");
         });
         $(".form-dest").submit(function(){
             var dataString = $(this).serialize();
-            $.post('getProjectsJSON.php', dataString, function(data) {
+            $.post('getUsersJSON.php', dataString, function(data) {
                 var table = buildTable(data);
 
                 $("#projectsTable").html(
@@ -79,7 +77,7 @@
     function submitRowAsForm(idRow) {
         var form = document.createElement("form"); // CREATE A NEW FORM TO DUMP ELEMENTS INTO FOR SUBMISSION
         form.method = "post"; // CHOOSE FORM SUBMISSION METHOD, "GET" OR "POST"
-        form.action = "projectPage.php"; // TELL THE FORM WHAT PAGE TO SUBMIT TO
+        form.action = "userPage.php"; // TELL THE FORM WHAT PAGE TO SUBMIT TO
         $("#"+idRow+" td").children().each(function() { // GRAB ALL CHILD ELEMENTS OF <TD>'S IN THE ROW IDENTIFIED BY idRow, CLONE THEM, AND DUMP THEM IN OUR FORM
             if(this.type.substring(0,6) == "select") { // JQUERY DOESN'T CLONE <SELECT> ELEMENTS PROPERLY, SO HANDLE THAT
                 input = document.createElement("input"); // CREATE AN ELEMENT TO COPY VALUES TO
