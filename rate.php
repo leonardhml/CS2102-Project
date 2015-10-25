@@ -1,5 +1,8 @@
 <?php
 session_start();
+?>
+<?php
+session_start();
 if (is_ajax() || !is_ajax()) {
     rate();
     // if (isset($_POST["action"]) && !empty($_POST["action"])) { //Checks if action value exists

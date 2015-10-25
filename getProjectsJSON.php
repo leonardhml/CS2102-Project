@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 if (is_ajax()) {
     get_projects();
    // if (isset($_POST["action"]) && !empty($_POST["action"])) { //Checks if action value exists
