@@ -242,11 +242,17 @@
 }
 
 #tagcloud{
-        color: #dda0dd;
-        font-family: Arial, verdana, sans-serif;
-        width:600px;
-        border: 1px solid black;
-    text-align: center;
+  color: #dda0dd;
+  font-family: Arial, verdana, sans-serif;
+  width:600px;
+  border: 1px solid black;
+  text-align: center;
+  span { padding: 2px; }
+  .smallTag { font-size: 11px; }
+  .mediumTag { font-size: 16px; }
+  .largeTag { font-size: 24px; }
+  a:link, a:visited { color: #0000CC; }
+  a:hover { color: #999; }
 }
 
 #tagcloud a{
