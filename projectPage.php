@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
+<?php include 'getRaised.php'; ?>
 <?php include 'layout/config.php'; ?>
 <?php include 'layout/layout-head.php'; ?>
 
@@ -22,7 +23,7 @@ while ($row = oci_fetch_array($project, OCI_BOTH)) {
     $desc = $row['DESCRIPTION'];
     $proposer = $row['PROPOSER'];
     $target = $row['TARGET'];
-    $raised = $row['RAISED'];
+    $raised = getRaised($title, $inCharge);
     $tag = $row['TAG'];
 }
 

@@ -1,6 +1,9 @@
 <?php
 session_start();
 ?>
+
+<?php include 'getRaised.php'; ?>
+
 <?php
 if (is_ajax() || !is_ajax()) {
     get_projects();
@@ -81,7 +84,7 @@ function get_projects(){
                     WHERE f.p_title = p.title
                     AND f.p_in_charge = p.in_charge)
                 AND p.target > (
-                    SELECT sum(f2   .amount)
+                    SELECT sum(f2.amount)
                     FROM fund_record f2
                     WHERE f2.p_title = p.title
                     AND f2.p_in_charge = p.in_charge)
@@ -95,13 +98,13 @@ function get_projects(){
     oci_execute($res, OCI_DEFAULT);
     $return_array = array();
     while ($row = oci_fetch_array($res, OCI_BOTH)) {
-        $row_array['Title'] = $row[0];
+        $row_array['Title'] = $row['TITLE'];
         $row_array['In Charge'] = $row['IN_CHARGE'];
         $row_array['Proposer'] = $row['PROPOSER'];
         $row_array['Start Date'] = $row['START_DATE'];
         $row_array['End Date'] = $row['END_DATE'];
         $row_array['Target'] = $row['TARGET'];
-        $row_array['Raised'] = $row['RAISED'];
+        $row_array['Raised'] = getRaised($row['TITLE'], $row['IN_CHARGE']);
         $row_array['Description'] = $row['DESCRIPTION'];
         array_push($return_array, $row_array);
     }
