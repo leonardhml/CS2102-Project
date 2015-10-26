@@ -195,9 +195,33 @@
                 </div>
             </div>
             <div class="col-md-4 col-sm-12">
-                <div class="service-wrapper"><img src="img/skyscanner.png" alt="skyscanner"/>
-                    <h3>Car Rental via Skyscanner</h3>
-                    <p>Hit the road right after your flight! Enjoy premium services at discounted price! Only availble to Krisflyer members</p><a href="/skyscanner" class="btn">Read more</a>
+                <div class="service-wrapper">
+                    <h3>Top 10 Users</h3>
+                    <table class="table table-bordered" id="top10projects">
+                        <thead>
+                        <tr><th style="text-align: center">No. </th>
+                            <th style="text-align: center">User Email</th>
+                            <th style="text-align: center">Rating</th>
+                            <th style="text-align: center">View</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <?php
+                        $query = "SELECT m.name, u.email, to_char(u.rating, '0.99') FROM top_users u, member m WHERE m.email = u.email ORDER BY rating DESC";
+                        $res = oci_parse($dbh, $query);
+                        oci_execute($res);
+                        $i = 1;
+
+                        while (($row = oci_fetch_array($res, OCI_BOTH)) && $i<11) {
+                            $name = $row[0];
+                            $email = $row[1];
+                            $rating = $row[2];
+                            echo "<tr id='row".$i."'><td>".$i.".</td><td><input type='hidden' value='".$email."' name='Email' />".$name."</td><td>".$rating."</td><td><button onclick=\"submitRowAsFormUser('row".$i."')\">View</button></td></tr>";
+                            $i++;
+                        }
+                        ?>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -214,6 +238,23 @@
         var form = document.createElement("form"); // CREATE A NEW FORM TO DUMP ELEMENTS INTO FOR SUBMISSION
         form.method = "post"; // CHOOSE FORM SUBMISSION METHOD, "GET" OR "POST"
         form.action = "projectPage.php"; // TELL THE FORM WHAT PAGE TO SUBMIT TO
+        $("#"+idRow+" td").children().each(function() { // GRAB ALL CHILD ELEMENTS OF <TD>'S IN THE ROW IDENTIFIED BY idRow, CLONE THEM, AND DUMP THEM IN OUR FORM
+            if(this.type.substring(0,6) == "select") { // JQUERY DOESN'T CLONE <SELECT> ELEMENTS PROPERLY, SO HANDLE THAT
+                input = document.createElement("input"); // CREATE AN ELEMENT TO COPY VALUES TO
+                input.type = "hidden";
+                input.name = this.name; // GIVE ELEMENT SAME NAME AS THE <SELECT>
+                input.value = this.value; // ASSIGN THE VALUE FROM THE <SELECT>
+                form.appendChild(input);
+            } else { // IF IT'S NOT A SELECT ELEMENT, JUST CLONE IT.
+                $(this).clone().appendTo(form);
+            }
+
+        });
+        form.submit(); // NOW SUBMIT THE FORM THAT WE'VE JUST CREATED AND POPULATED
+    }function submitRowAsFormUser(idRow) {
+        var form = document.createElement("form"); // CREATE A NEW FORM TO DUMP ELEMENTS INTO FOR SUBMISSION
+        form.method = "post"; // CHOOSE FORM SUBMISSION METHOD, "GET" OR "POST"
+        form.action = "userPage.php"; // TELL THE FORM WHAT PAGE TO SUBMIT TO
         $("#"+idRow+" td").children().each(function() { // GRAB ALL CHILD ELEMENTS OF <TD>'S IN THE ROW IDENTIFIED BY idRow, CLONE THEM, AND DUMP THEM IN OUR FORM
             if(this.type.substring(0,6) == "select") { // JQUERY DOESN'T CLONE <SELECT> ELEMENTS PROPERLY, SO HANDLE THAT
                 input = document.createElement("input"); // CREATE AN ELEMENT TO COPY VALUES TO
