@@ -40,7 +40,7 @@ function get_users(){
     if ($minRating >= 1) {
         $sql = "SELECT *
     FROM member m
-    WHERE (m.email LIKE '%" . $email . "%' OR m.name LIKE '%" . $name . "%')
+    WHERE (m.email LIKE '%" . $email . "%' AND m.name LIKE '%" . $name . "%')
     AND EXISTS (
         SELECT v.votee
         FROM m_vote v
@@ -50,7 +50,7 @@ function get_users(){
     } else {
         $sql = "SELECT *
     FROM member m
-    WHERE (m.email LIKE '%" . $email . "%' OR m.name LIKE '%" . $name . "%')
+    WHERE (m.email LIKE '%" . $email . "%' AND m.name LIKE '%" . $name . "%')
     AND (EXISTS (
         SELECT v.votee
         FROM m_vote v

@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html>
 <?php include 'layout/config.php'; ?>
@@ -85,9 +88,9 @@
                 
                 foreach($tags as $tag)
                 {
-                  if($tag->Count == $maxCount) $class = ’largeTag’;
-                  else if($tag->Count >= ($maxCount/3)) $class = ’mediumTag’;
-                  else $class = ’smallTag’;
+                  if($tag->Count == $maxCount) $class = 'largeTag';
+                  else if($tag->Count >= ($maxCount/3)) $class = 'mediumTag';
+                  else $class = 'smallTag';
  //               echo ’<span class="’. $class .’">
  //                  <a href="#">’. $tag->name .’</a>
  //                   </span>’;

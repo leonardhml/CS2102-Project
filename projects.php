@@ -5,6 +5,16 @@ session_start();
 <html>
 <?php include 'layout/config.php'; ?>
 <?php include 'layout/layout-head.php'; ?>
+<head>
+    <script>
+        $(function() {
+            $( "#accordion" ).accordion({
+                collapsible: true,
+                active: false
+            });
+        });
+    </script>
+</head>
 <body>
 <div id="fly" style="position: absolute; top:50px; left: -50px;"><img src="img/steph0001.gif" /> </div>
 <?php include 'layout/layout-header.php'; ?>
@@ -19,14 +29,83 @@ session_start();
 </div>
 <div class="section">
     <div class="container">
-        <form action="" method="POST" class="form-dest">
-            <div class="form-group">
-                <input id="projTitle" type="text" value="<?php if(isset($_POST['projTitle'])) {echo $_POST['projTitle'];} else {echo "";} ?>" name="projTitle" placeholder="Search for a Project" autofocus="autofocus" class="form-control col-md-10 home-input"/>
+        <div>
+            <form action="" method="POST" class="form-dest">
+                <div class="form-group">
+                    <input id="projTitle" type="text" value="<?php if(isset($_POST['projTitle'])) {echo $_POST['projTitle'];} else {echo "";} ?>" name="projTitle" placeholder="Search for a Project" autofocus="autofocus" class="form-control col-md-10 home-input"/>
 
-                <button type="submit" class="btn btn-primary btn-wm col-md-1 pull-right">Enter</button>
+                    <button type="submit" class="btn btn-primary btn-wm col-md-1 pull-right">Enter</button>
+                </div>
+            </form>
+            <button type="button" id="test">click me</button>
+        </div>
+        <br/>
+        <br/>
+        <div id="accordion">
+            <h3>Advanced Search</h3>
+            <div>
+                <form class="form-horizontal" role="form" action="getUsersJSONAdvanced.php" method="post" id="advanced">
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="email" id="email" placeholder="Enter email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="pwd">Name:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="sel1">Minimum Rating:</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" id="minRating" name="minRating">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="sel1">Maximum Rating:</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" id="maxRating" name="maxRating">
+                                <option>0</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div><span id="ratingErr" style='color: red'></span>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="hasProject" id="hasProject">With Projects</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="numProjects">How many?</label>
+                        <div class="col-sm-2">
+                            <input type="number" class="form-control" value="1" min="1" id="numProjects" name="numProjects" disabled>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </form>
-        <button type="button" id="test">click me</button>
+        </div>
+        <br/>
+        <br/>
     </div>
     <div class="container">
         <table class="table table-bordered" id="projectsTable">

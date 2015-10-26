@@ -44,7 +44,7 @@ session_start();
         $res = oci_parse($dbh, $sql);
         if (oci_execute($res, OCI_COMMIT_ON_SUCCESS)) {
             oci_close($dbh);
-            echo "<p>Your project was uploaded successfully.</p>";
+            echo "<p>Your project was uploaded successfully.</p><img";
         } else {
             oci_close($dbh);
             echo "<p>Error! Your project could not be uploaded.</p>";
