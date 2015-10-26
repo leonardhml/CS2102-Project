@@ -27,7 +27,7 @@ while ($row = oci_fetch_array($project, OCI_BOTH)) {
     $tag = $row['TAG'];
 }
 
-$sql = "SELECT avg(rating), count(rating) FROM p_vote WHERE p_title ='".$title."' AND p_in_charge='".$inCharge."' GROUP BY p_title, p_in_charge";
+$sql = "SELECT to_char(avg(rating), '0.99'), count(rating) FROM p_vote WHERE p_title ='".$title."' AND p_in_charge='".$inCharge."' GROUP BY p_title, p_in_charge";
 $project = oci_parse($dbh, $sql);
 oci_execute($project, OCI_DEFAULT);
 

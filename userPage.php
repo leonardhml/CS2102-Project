@@ -22,7 +22,7 @@ while ($row = oci_fetch_array($member, OCI_BOTH)) {
     $phone= $row['PHONE'];
 }
 
-$sql = "SELECT avg(rating), count(rating) FROM m_vote WHERE votee='".$email."' GROUP BY votee";
+$sql = "SELECT to_char(avg(rating), '0.99'), count(rating) FROM m_vote WHERE votee='".$email."' GROUP BY votee";
 $project = oci_parse($dbh, $sql);
 oci_execute($project, OCI_DEFAULT);
 
