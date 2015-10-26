@@ -82,7 +82,7 @@
                 $res = oci_parse($dbh, $sql);
                 oci_execute($res, OCI_DEFAULT);
                 $tags = array(); // create empty array
-                $maximum = 10; // $maximum is the highest counter for a search term
+                $maximum = 0; // $maximum is the highest counter for a search term
 
                 //$row_array = array();
                 while ($row = oci_fetch_array($res)) {
