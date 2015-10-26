@@ -30,7 +30,7 @@ session_start();
 <div class="section">
     <div class="container">
         <div>
-            <form action="" method="POST" class="form-dest">
+            <form action="" method="POST" class="form-dest" id="simple">
                 <div class="form-group">
                     <input id="projTitle" type="text" value="<?php if(isset($_POST['projTitle'])) {echo $_POST['projTitle'];} else {echo "";} ?>" name="projTitle" placeholder="Search for a Project" autofocus="autofocus" class="form-control col-md-10 home-input"/>
 
@@ -44,21 +44,34 @@ session_start();
         <div id="accordion">
             <h3>Advanced Search</h3>
             <div>
-                <form class="form-horizontal" role="form" action="getUsersJSONAdvanced.php" method="post" id="advanced">
+                <form class="form-horizontal" role="form" action="getProjectsJSONAdvanced.php" method="post" id="advanced">
                     <div class="form-group">
-                        <label class="control-label col-sm-2" for="email">Email:</label>
+                        <label class="control-label col-sm-2" for="title">Title:</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="email" id="email" placeholder="Enter email">
+                            <input type="text" class="form-control" name="title" id="title" placeholder="Enter title">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-2" for="pwd">Name:</label>
+                        <label class="control-label col-sm-2" for="by">By:</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter name">
+                            <input type="text" class="form-control" id="by" name="by" placeholder="Enter organisation/proposer">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-2" for="sel1">Minimum Rating:</label>
+                        <label class="control-label col-sm-2" for="sDate">Start Date:</label>
+                        <div class="col-sm-4">
+                            <input type="date" class="form-control" id="sDate" name="sDate"/>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="eDate">End Date:</label>
+                        <div class="col-sm-4">
+                            <input type="date" class="form-control" id="eDate" name="eDate"/>
+
+                        </div><span id="dateErr" style='color: red'></span>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="minRating">Minimum Rating:</label>
                         <div class="col-sm-2">
                             <select class="form-control" id="minRating" name="minRating">
                                 <option>0</option>
@@ -71,7 +84,7 @@ session_start();
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-2" for="sel1">Maximum Rating:</label>
+                        <label class="control-label col-sm-2" for="maxRating">Maximum Rating:</label>
                         <div class="col-sm-2">
                             <select class="form-control" id="maxRating" name="maxRating">
                                 <option>0</option>
@@ -84,16 +97,27 @@ session_start();
                         </div><span id="ratingErr" style='color: red'></span>
                     </div>
                     <div class="form-group">
-                        <div class="col-sm-offset-2 col-sm-10">
-                            <div class="checkbox">
-                                <label><input type="checkbox" name="hasProject" id="hasProject">With Projects</label>
-                            </div>
+                        <label class="control-label col-sm-2" for="tag">Tag:</label>
+                        <div class="col-sm-2">
+                            <select class="form-control" id="tag" name="tag">
+                                <?php
+                                $sql = "SELECT * FROM tag";
+                                $res = oci_parse($dbh, $sql);
+                                oci_execute($res, OCI_DEFAULT);
+
+                                while ($row = oci_fetch_array($res, OCI_BOTH)) {
+                                    $tag = $row['WORD'];
+                                    echo "<option>".$tag."</option>";
+                                }
+                                ?>
+                            </select>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="control-label col-sm-2" for="numProjects">How many?</label>
-                        <div class="col-sm-2">
-                            <input type="number" class="form-control" value="1" min="1" id="numProjects" name="numProjects" disabled>
+                        <div class="col-sm-offset-2 col-sm-10">
+                            <div class="checkbox">
+                                <label><input type="checkbox" name="unfinished" id="unfinished">Search unfulfilled projects only</label>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -118,7 +142,7 @@ session_start();
             $("#fly").animate({left: "+=500", top: "+=250"}, 3000);
 
         });
-        $(".form-dest").submit(function(){
+        $("#simple").submit(function(){
             var dataString = $(this).serialize();
             $.post('getProjectsJSON.php', dataString, function(data) {
                 var table = buildTable(data);
@@ -155,6 +179,51 @@ session_start();
 
             return false;
         });
+
+        $("#advanced").submit(function(ev){
+            ev.preventDefault();
+            if($('#maxRating').val() < $('#minRating').val()) {
+                $('#ratingErr').html('Maximum Rating must be larger than or equal to Minimum Rating');
+            } else if ($("#eDate").val() < $("#sDate").val()) {
+                $("#dateErr").html('End date must be after start date');
+            } else {
+                var dataString = $(this).serialize();
+                $.post('getProjectsJSONAdvanced.php', dataString, function (data) {
+                    var table = buildTable(data);
+
+                    $("#projectsTable").html(
+                        table
+                    );
+
+                    function buildTable(data) {
+                        //    alert(data);
+                        var dataJSON = jQuery.parseJSON(data);
+                        var tmp = "<thead><tr>";
+                        for (var header in dataJSON[0]) {
+                            tmp = tmp + "<th>" + header + "</th>";
+                        }
+                        tmp = tmp + "<th>View</th>";
+                        tmp = tmp + "</tr></thead>";
+                        tmp = tmp + "<tbody>";
+                        for (var i = 0; i < dataJSON.length; i++) {
+                            var obj = dataJSON[i];
+                            tmp = tmp + "<tr id='row" + i + "'>";
+                            for (var header in obj) {
+                                tmp = tmp + "<td><input type='hidden' value='" + obj[header] + "' name='" + header + "'/> " + obj[header] + "</td>";
+                            }
+                            tmp = tmp + "<td><button onclick=\"submitRowAsForm('row" + i + "')\">View</button></td>";
+                            tmp = tmp + "</tr>";
+                        }
+                        tmp = tmp + "</tbody>";
+                        //    alert(tmp);
+                        return tmp;
+                    }
+
+                });
+
+                return false;
+            }
+        });
     });
 </script>
 <script>
@@ -180,3 +249,6 @@ session_start();
 <?php include 'layout/layout-footer.php'; ?>
 </body>
 </html>
+<?php
+oci_close($dbh);
+?>

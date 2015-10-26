@@ -2,6 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/getProjectsJSON.php" dialect="Oracle" />
+    <file url="file://$PROJECT_DIR$/getProjectsJSONAdvanced.php" dialect="Oracle" />
     <file url="file://$PROJECT_DIR$/steFund.php" dialect="Oracle" />
   </component>
 </project>

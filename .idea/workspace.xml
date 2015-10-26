@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="13f67720-2914-4efc-ba6a-1df429d55462" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getUsersJSONAdvanced.php" afterPath="$PROJECT_DIR$/getUsersJSONAdvanced.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage.php" afterPath="$PROJECT_DIR$/homepage.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects.php" afterPath="$PROJECT_DIR$/projects.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submitSuccess.php" afterPath="$PROJECT_DIR$/submitSuccess.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CS2102-Project.iws" />
@@ -27,29 +25,16 @@
     <favorites_list name="CS2102-Project" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49260172">
+    <splitter split-orientation="horizontal" split-proportion="0.53699136">
       <split-first>
         <leaf>
-          <file leaf-file-name="homepage.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="homepage.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/homepage.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.037988827">
+                <state vertical-scroll-proportion="9.807693">
                   <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
                   <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <marker date="1445835374131" expanded="true" signature="4554:4642" placeholder="..." />
-                    <marker date="1445835374131" expanded="true" signature="4770:6107" placeholder="..." />
-                    <marker date="1445835374131" expanded="true" signature="4798:6100" placeholder="..." />
-                    <marker date="1445835374131" expanded="true" signature="4824:6089" placeholder="..." />
-                    <marker date="1445835374131" expanded="true" signature="4869:5241" placeholder="..." />
-                    <marker date="1445835374131" expanded="true" signature="4915:5222" placeholder="..." />
-                    <marker date="1445835374131" expanded="true" signature="5286:5647" placeholder="..." />
-                    <marker date="1445835374131" expanded="true" signature="5332:5628" placeholder="..." />
-                    <marker date="1445835374131" expanded="true" signature="5692:6074" placeholder="..." />
-                    <marker date="1445835374131" expanded="true" signature="5738:6055" placeholder="..." />
+                    <marker date="1445859067799" expanded="true" signature="4634:4642" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -72,7 +57,7 @@
           <file leaf-file-name="projectPage.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/projectPage.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.33333334">
+                <state vertical-scroll-proportion="-0.0">
                   <caret line="138" column="71" selection-start-line="138" selection-start-column="71" selection-end-line="138" selection-end-column="71" />
                   <folding>
                     <marker date="1445789383029" expanded="true" signature="204:290" placeholder="SELECT * FRO..proposed_project..." />
@@ -85,8 +70,8 @@
           <file leaf-file-name="getUsersJSONAdvanced.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/getUsersJSONAdvanced.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.33333334">
-                  <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+                <state vertical-scroll-proportion="-17.653847">
+                  <caret line="57" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="90" selection-end-column="2" />
                   <folding>
                     <marker date="1445833200241" expanded="true" signature="1289:1544" placeholder="SELECT * FRO..member..." />
                     <marker date="1445833200241" expanded="true" signature="1289:1583" placeholder="SELECT * FRO..member..." />
@@ -100,23 +85,33 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="projects.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/projects.php">
+          <file leaf-file-name="getProjectsJSONAdvanced.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/getProjectsJSONAdvanced.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-11.538462">
-                  <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-                  <folding />
+                <state vertical-scroll-proportion="0.10726257">
+                  <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+                  <folding>
+                    <marker date="1445865793201" expanded="true" signature="1409:1990" placeholder="SELECT * FRO..member..." />
+                    <marker date="1445865793201" expanded="true" signature="1409:1991" placeholder="SELECT * FRO..proposed_project..." />
+                    <marker date="1445865793201" expanded="true" signature="1731:1971" placeholder="SELECT v.vot..m_vote..." />
+                    <marker date="1445865793201" expanded="true" signature="2023:2740" placeholder="SELECT * FRO..proposed_project..." />
+                    <marker date="1445865793201" expanded="true" signature="2023:2741" placeholder="SELECT * FRO..proposed_project..." />
+                    <marker date="1445865793201" expanded="true" signature="2513:2585" placeholder="SELECT v.vot..m_vote..." />
+                    <marker date="1445865793201" expanded="true" signature="2513:2740" placeholder="SELECT * FRO..member..." />
+                    <marker date="1445865793201" expanded="true" signature="2633:2693" placeholder="SELECT * FRO..m_vote..." />
+                    <marker date="1445865793201" expanded="true" signature="2633:2739" placeholder="SELECT * FRO..p_vote..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="submitSuccess.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/submitSuccess.php">
+          <file leaf-file-name="getProjectsJSON.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/getProjectsJSON.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-23.0">
-                  <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
+                <state vertical-scroll-proportion="-24.846153">
+                  <caret line="48" column="5" selection-start-line="37" selection-start-column="28" selection-end-line="48" selection-end-column="5" />
                   <folding>
-                    <marker date="1445834998694" expanded="true" signature="1108:1391" placeholder="INSERT INTO ..." />
+                    <marker date="1445770939431" expanded="true" signature="1068:1137" placeholder="SELECT * FRO..proposed_project..." />
                   </folding>
                 </state>
               </provider>
@@ -126,11 +121,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="users.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="users.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/users.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2849162">
-                  <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
+                <state vertical-scroll-proportion="-30.076923">
+                  <caret line="206" column="11" selection-start-line="165" selection-start-column="8" selection-end-line="206" selection-end-column="11" />
                   <folding />
                 </state>
               </provider>
@@ -139,11 +134,35 @@
           <file leaf-file-name="donate.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/donate.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.31034482">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
                   <folding>
                     <marker date="1445685958548" expanded="true" signature="1177:1315" placeholder="INSERT INTO ..." />
                     <marker date="1445685958548" expanded="true" signature="1427:1557" placeholder="UPDATE propo..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="projects.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/projects.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.11731844">
+                  <caret line="182" column="2" selection-start-line="182" selection-start-column="2" selection-end-line="182" selection-end-column="2" />
+                  <folding>
+                    <marker date="1445865631262" expanded="true" signature="4804:4821" placeholder="SELECT * FRO..tag..." />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="submitSuccess.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/submitSuccess.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="-26.576923">
+                  <caret line="53" column="10" selection-start-line="41" selection-start-column="84" selection-end-line="41" selection-end-column="123" />
+                  <folding>
+                    <marker date="1445834998694" expanded="true" signature="1108:1391" placeholder="INSERT INTO ..." />
                   </folding>
                 </state>
               </provider>
@@ -212,9 +231,10 @@
         <option value="$PROJECT_DIR$/projectPage.php" />
         <option value="$PROJECT_DIR$/users.php" />
         <option value="$PROJECT_DIR$/getUsersJSONAdvanced.php" />
-        <option value="$PROJECT_DIR$/projects.php" />
         <option value="$PROJECT_DIR$/submitSuccess.php" />
         <option value="$PROJECT_DIR$/homepage.php" />
+        <option value="$PROJECT_DIR$/projects.php" />
+        <option value="$PROJECT_DIR$/getProjectsJSONAdvanced.php" />
       </list>
     </option>
   </component>
@@ -274,8 +294,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -370,6 +388,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -449,7 +469,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -494,13 +514,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/insert.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/steFund.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -725,13 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/submit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.666667">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/editProfile.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="39.333332">
@@ -767,13 +773,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getProjectsJSON.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.060402684">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.020134227">
@@ -785,17 +784,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/getUsersJSON.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="2" />
-          <folding>
-            <marker date="1445770939419" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..member..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -811,10 +799,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/donate.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <marker date="1445685958548" expanded="true" signature="1177:1315" placeholder="INSERT INTO ..." />
+            <marker date="1445685958548" expanded="true" signature="1427:1557" placeholder="UPDATE propo..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getUsersJSON.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24022347">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projectPage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="138" column="71" selection-start-line="138" selection-start-column="71" selection-end-line="138" selection-end-column="71" />
+          <folding>
+            <marker date="1445789383029" expanded="true" signature="204:290" placeholder="SELECT * FRO..proposed_project..." />
+            <marker date="1445789383029" expanded="true" signature="751:886" placeholder="SELECT avg(r..p_vote..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/users.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.076923">
+          <caret line="206" column="11" selection-start-line="165" selection-start-column="8" selection-end-line="206" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/getUsersJSONAdvanced.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="57" column="24" selection-start-line="57" selection-start-column="24" selection-end-line="57" selection-end-column="24" />
+        <state vertical-scroll-proportion="-17.653847">
+          <caret line="57" column="24" selection-start-line="0" selection-start-column="0" selection-end-line="90" selection-end-column="2" />
           <folding>
             <marker date="1445833200241" expanded="true" signature="1289:1544" placeholder="SELECT * FRO..member..." />
             <marker date="1445833200241" expanded="true" signature="1289:1583" placeholder="SELECT * FRO..member..." />
@@ -827,73 +853,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projectPage.php">
+    <entry file="file://$PROJECT_DIR$/submit.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="138" column="71" selection-start-line="138" selection-start-column="71" selection-end-line="138" selection-end-column="71" />
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
           <folding>
-            <marker date="1445789383029" expanded="true" signature="204:290" placeholder="SELECT * FRO..proposed_project..." />
-            <marker date="1445789383029" expanded="true" signature="751:886" placeholder="SELECT avg(r..p_vote..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/donate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31034482">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <marker date="1445685958548" expanded="true" signature="1177:1315" placeholder="INSERT INTO ..." />
-            <marker date="1445685958548" expanded="true" signature="1427:1557" placeholder="UPDATE propo..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/users.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2849162">
-          <caret line="40" column="14" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.538462">
-          <caret line="43" column="13" selection-start-line="43" selection-start-column="13" selection-end-line="43" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/submitSuccess.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.0">
-          <caret line="46" column="68" selection-start-line="46" selection-start-column="68" selection-end-line="46" selection-end-column="68" />
-          <folding>
-            <marker date="1445834998694" expanded="true" signature="1108:1391" placeholder="INSERT INTO ..." />
+            <marker date="1445768130874" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tag..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/homepage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.037988827">
+        <state vertical-scroll-proportion="9.807693">
           <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1445835374131" expanded="true" signature="4554:4642" placeholder="..." />
-            <marker date="1445835374131" expanded="true" signature="4770:6107" placeholder="..." />
-            <marker date="1445835374131" expanded="true" signature="4798:6100" placeholder="..." />
-            <marker date="1445835374131" expanded="true" signature="4824:6089" placeholder="..." />
-            <marker date="1445835374131" expanded="true" signature="4869:5241" placeholder="..." />
-            <marker date="1445835374131" expanded="true" signature="4915:5222" placeholder="..." />
-            <marker date="1445835374131" expanded="true" signature="5286:5647" placeholder="..." />
-            <marker date="1445835374131" expanded="true" signature="5332:5628" placeholder="..." />
-            <marker date="1445835374131" expanded="true" signature="5692:6074" placeholder="..." />
-            <marker date="1445835374131" expanded="true" signature="5738:6055" placeholder="..." />
+            <marker date="1445859067799" expanded="true" signature="4634:4642" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/submitSuccess.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-26.576923">
+          <caret line="53" column="10" selection-start-line="41" selection-start-column="84" selection-end-line="41" selection-end-column="123" />
+          <folding>
+            <marker date="1445834998694" expanded="true" signature="1108:1391" placeholder="INSERT INTO ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getProjectsJSON.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.846153">
+          <caret line="48" column="5" selection-start-line="37" selection-start-column="28" selection-end-line="48" selection-end-column="5" />
+          <folding>
+            <marker date="1445770939431" expanded="true" signature="1068:1137" placeholder="SELECT * FRO..proposed_project..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11731844">
+          <caret line="182" column="2" selection-start-line="182" selection-start-column="2" selection-end-line="182" selection-end-column="2" />
+          <folding>
+            <marker date="1445865631262" expanded="true" signature="4804:4821" placeholder="SELECT * FRO..tag..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/getProjectsJSONAdvanced.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10726257">
+          <caret line="35" column="62" selection-start-line="35" selection-start-column="62" selection-end-line="35" selection-end-column="62" />
+          <folding>
+            <marker date="1445865793201" expanded="true" signature="1409:1990" placeholder="SELECT * FRO..member..." />
+            <marker date="1445865793201" expanded="true" signature="1409:1991" placeholder="SELECT * FRO..proposed_project..." />
+            <marker date="1445865793201" expanded="true" signature="1731:1971" placeholder="SELECT v.vot..m_vote..." />
+            <marker date="1445865793201" expanded="true" signature="2023:2740" placeholder="SELECT * FRO..proposed_project..." />
+            <marker date="1445865793201" expanded="true" signature="2023:2741" placeholder="SELECT * FRO..proposed_project..." />
+            <marker date="1445865793201" expanded="true" signature="2513:2585" placeholder="SELECT v.vot..m_vote..." />
+            <marker date="1445865793201" expanded="true" signature="2513:2740" placeholder="SELECT * FRO..member..." />
+            <marker date="1445865793201" expanded="true" signature="2633:2693" placeholder="SELECT * FRO..m_vote..." />
+            <marker date="1445865793201" expanded="true" signature="2633:2739" placeholder="SELECT * FRO..p_vote..." />
           </folding>
         </state>
       </provider>
