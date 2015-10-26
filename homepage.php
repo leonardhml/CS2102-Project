@@ -156,9 +156,8 @@
 </section>
 
 <div class="section section-white">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-sm-12">
+    <div class="container-fluid">
+        <div class="col-md-4 col-sm-12">
                 <div class="service-wrapper">
                     <h3>Top 10 Projects</h3>
                     <table class="table table-bordered" id="top10projects">
@@ -187,42 +186,64 @@
                         </tbody>
                     </table>
                    </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="service-wrapper"><img src="img/uber.png" alt="Uber"/>
-                    <h3>Taxi Booking via Uber</h3>
-                    <p>Enjoy on demand rides! Transportation in minutes from airports all around the world to your destination doorstep.</p><a href="/UberTaxi" class="btn">Read more</a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-12">
-                <div class="service-wrapper">
-                    <h3>Top 10 Users</h3>
-                    <table class="table table-bordered" id="top10projects">
-                        <thead>
-                        <tr><th style="text-align: center">No. </th>
-                            <th style="text-align: center">User</th>
-                            <th style="text-align: center">Rating</th>
-                            <th style="text-align: center">View</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <?php
-                        $query = "SELECT m.name, u.email, to_char(u.rating, '0.99') FROM top_users u, member m WHERE m.email = u.email ORDER BY rating DESC";
-                        $res = oci_parse($dbh, $query);
-                        oci_execute($res);
-                        $i = 1;
+    </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="service-wrapper">
+                <h3>Most Generous Donors</h3>
+                <table class="table table-bordered" id="top10projects">
+                    <thead>
+                    <tr><th style="text-align: center">No. </th>
+                        <th style="text-align: center">User</th>
+                        <th style="text-align: center">Donated</th>
+                        <th style="text-align: center">View</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    $query = "SELECT m.name, f.donor, sum(f.amount) AS total FROM fund_record f, member m WHERE m.email = f.donor GROUP BY f.donor, m.name ORDER BY total DESC";
+                    $res = oci_parse($dbh, $query);
+                    oci_execute($res);
+                    $i = 1;
 
-                        while (($row = oci_fetch_array($res, OCI_BOTH)) && $i<11) {
-                            $name = $row[0];
-                            $email = $row[1];
-                            $rating = $row[2];
-                            echo "<tr id='row".$i."'><td>".$i.".</td><td><input type='hidden' value='".$email."' name='Email' />".$name."</td><td>".$rating."</td><td><button onclick=\"submitRowAsFormUser('row".$i."')\">View</button></td></tr>";
-                            $i++;
-                        }
-                        ?>
-                        </tbody>
-                    </table>
-                </div>
+                    while (($row = oci_fetch_array($res, OCI_BOTH)) && $i<11) {
+                        $name = $row[0];
+                        $email = $row[1];
+                        $amount = $row[2];
+                        echo "<tr id='rowx".$i."'><td>".$i.".</td><td><input type='hidden' value='".$email."' name='Email' />".$name."</td><td>$".$amount."</td><td><button onclick=\"submitRowAsFormUser('rowx".$i."')\">View</button></td></tr>";
+                        $i++;
+                    }
+                    ?>
+                    </tbody>
+                </table> </div>
+        </div>
+        <div class="col-md-4 col-sm-12">
+            <div class="service-wrapper">
+                <h3>Top 10 Users</h3>
+                <table class="table table-bordered" id="top10projects">
+                    <thead>
+                    <tr><th style="text-align: center">No. </th>
+                        <th style="text-align: center">User</th>
+                        <th style="text-align: center">Rating</th>
+                        <th style="text-align: center">View</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                    $query = "SELECT m.name, u.email, to_char(u.rating, '0.99') FROM top_users u, member m WHERE m.email = u.email ORDER BY rating DESC";
+                    $res = oci_parse($dbh, $query);
+                    oci_execute($res);
+                    $i = 1;
+
+                    while (($row = oci_fetch_array($res, OCI_BOTH)) && $i<11) {
+                        $name = $row[0];
+                        $email = $row[1];
+                        $rating = $row[2];
+                        echo "<tr id='row".$i."'><td>".$i.".</td><td><input type='hidden' value='".$email."' name='Email' />".$name."</td><td>".$rating."</td><td><button onclick=\"submitRowAsFormUser('row".$i."')\">View</button></td></tr>";
+                        $i++;
+                    }
+                    ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
