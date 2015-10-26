@@ -78,4 +78,14 @@ WHERE (p.title, p.in_charge) NOT IN (
   FROM p_vote vo)
 );
 
-SELECT * FROM top_projects ORDER BY rating DESC;
+CREATE VIEW top_users AS
+(SELECT v.votee AS email, avg(v.rating) AS rating
+FROM m_vote v
+GROUP BY v.votee)
+UNION
+(SELECT m.email AS email, 0.00 AS rating
+FROM member m
+WHERE m.email NOT IN (
+  SELECT vo.votee
+  FROM m_vote vo)
+);

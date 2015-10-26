@@ -4,3 +4,6 @@ DROP TABLE fund_record;
 DROP TABLE proposed_project;
 DROP TABLE member;
 DROP TABLE tag;
+DROP SEQUENCE seq_ID;
+DROP VIEW top_projects;
+DROP VIEW top_users;

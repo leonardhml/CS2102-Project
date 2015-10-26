@@ -200,7 +200,7 @@
                     <table class="table table-bordered" id="top10projects">
                         <thead>
                         <tr><th style="text-align: center">No. </th>
-                            <th style="text-align: center">User Email</th>
+                            <th style="text-align: center">User</th>
                             <th style="text-align: center">Rating</th>
                             <th style="text-align: center">View</th>
                         </tr>
