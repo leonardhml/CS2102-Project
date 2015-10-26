@@ -13,11 +13,20 @@
                               <li><a href="http://www.singaporeair.com/en_UK/sg/home">Flight Status</a></li>
                           </ul>
                       </li> -->
-                <li><a href="submit.php">Submit a Project!</a></li>
-                <li><a href="users.php">Users</a></li>
-                <li><a href="projects.php">Projects</a></li>
-                <li><a href="loginScreen.php">Login</a></li>
-                <li><a href="register.php">Register</a></li>
+
+<?php
+if(isset($_SESSION['login_user'])) {
+    echo '<li><a href="profile.php">Welcome, '.$_SESSION['login_user'].'</a></li>
+    <li><a href="submit.php">Submit a Project!</a></li>
+    <li><a href="users.php">Users</a></li>
+    <li><a href="projects.php">Projects</a></li>
+    <li><a href="logout.php">Logout</a></li>';
+} else {
+    echo '
+    <li><a href="loginScreen.php">Login</a></li>
+    <li><a href="register.php">Register</a></li>';
+}
+?>
             </ul>
         </div>
     </div>

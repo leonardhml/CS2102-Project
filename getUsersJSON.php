@@ -3,13 +3,13 @@ session_start();
 ?>
 <?php
 if (is_ajax()) {
-    get_projects();
-   // if (isset($_POST["action"]) && !empty($_POST["action"])) { //Checks if action value exists
-   //     $action = $_POST["action"];
-   //     switch($action) { //Switch case for value of action
-   //         case "getProjects": get_projects(); break;
-   //     }
-   // }
+    get_users();
+    // if (isset($_POST["action"]) && !empty($_POST["action"])) { //Checks if action value exists
+    //     $action = $_POST["action"];
+    //     switch($action) { //Switch case for value of action
+    //         case "getProjects": get_projects(); break;
+    //     }
+    // }
 }
 
 //Function to check if the request is an AJAX request
@@ -17,7 +17,7 @@ function is_ajax() {
     return isset($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest';
 }
 
-function get_projects(){
+function get_users(){
     putenv('ORACLE_HOME=/oraclient');
     $nusnetid = 'a0127393';
     $nusnetpw = 'crse1510';
@@ -30,21 +30,15 @@ function get_projects(){
                     )
                 )');
 
-    $projectTitle = $_POST["projTitle"];
-    $sql = "SELECT * FROM proposed_project WHERE title LIKE '%".$projectTitle."%'";
-   // echo $sql;
+    $username = $_POST["username"];
+    $sql = "SELECT * FROM member WHERE email LIKE '%".$username."%' OR name LIKE '%".$username."%'";
+    // echo $sql;
     $res = oci_parse($dbh, $sql);
     oci_execute($res, OCI_DEFAULT);
     $return_array = array();
     while ($row = oci_fetch_array($res, OCI_BOTH)) {
-        $row_array['Title'] = $row[0];
-        $row_array['In Charge'] = $row['IN_CHARGE'];
-        $row_array['Proposer'] = $row['PROPOSER'];
-        $row_array['Start Date'] = $row['START_DATE'];
-        $row_array['End Date'] = $row['END_DATE'];
-        $row_array['Target'] = $row['TARGET'];
-        $row_array['Raised'] = $row['RAISED'];
-        $row_array['Description'] = $row['DESCRIPTION'];
+        $row_array['Email'] = $row['EMAIL'];
+        $row_array['Name'] = $row['NAME'];
         array_push($return_array, $row_array);
     }
     //Do what you need to do with the info. The following are some examples.

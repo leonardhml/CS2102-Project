@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 <?php include 'layout/config.php'; ?>
@@ -19,7 +22,7 @@
                         <div class="col-sm-12">
                             <div class="carousel-content centered">
                                 <h2 class="animation animated-item-1">SteFund</h2>
-                                <p class="animation animated-item-2">Where Your Dreams Come True!</p>
+                                <p class="animation animated-item-2">Where Your Dreams Come True</p>
                                 <div id="dest-box" class="animation animated-item-3">
                                     <form action="projects.php" method="POST" class="form-dest">
                                         <div class="form-group">

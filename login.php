@@ -1,4 +1,7 @@
 <?php
+session_start();
+?>
+<?php
 session_start(); // Starting Session
 putenv('ORACLE_HOME=/oraclient');
 $nusnetid = 'a0127393';
