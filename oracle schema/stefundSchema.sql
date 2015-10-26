@@ -21,7 +21,6 @@ proposal_date DATE NOT NULL,
 description VARCHAR(512),
 proposer VARCHAR(128) REFERENCES member(email) ON DELETE CASCADE,
 target NUMBER(*, 2) NOT NULL CHECK(target > 0),
-raised NUMBER(*, 2) DEFAULT 0 NOT NULL,
 tag VARCHAR(32) REFERENCES tag(word) ON DELETE CASCADE,
 bank_acct VARCHAR(32) NOT NULL,
 is_paidAd INT NOT NULL CHECK (is_paidAd = 0 OR is_paidAd = 1),
@@ -66,3 +65,27 @@ MINVALUE 1
 START WITH 1
 INCREMENT BY 1
 CACHE 10;
+
+CREATE VIEW top_projects AS
+(SELECT v.p_title AS title, v.p_in_charge AS in_charge, avg(v.rating) AS rating
+FROM p_vote v
+GROUP BY v.p_title, v.p_in_charge)
+UNION
+(SELECT p.title AS title, p.in_charge AS in_charge, 0.00 AS rating
+FROM proposed_project p
+WHERE (p.title, p.in_charge) NOT IN (
+  SELECT vo.p_title, vo.p_in_charge
+  FROM p_vote vo)
+);
+
+CREATE VIEW top_users AS
+(SELECT v.votee AS email, avg(v.rating) AS rating
+FROM m_vote v
+GROUP BY v.votee)
+UNION
+(SELECT m.email AS email, 0.00 AS rating
+FROM member m
+WHERE m.email NOT IN (
+  SELECT vo.votee
+  FROM m_vote vo)
+);

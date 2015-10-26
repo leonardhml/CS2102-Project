@@ -230,3 +230,6 @@ session_start();
 <?php include 'layout/layout-footer.php'; ?>
 </body>
 </html>
+<?php
+    oci_close($dbh);
+?>

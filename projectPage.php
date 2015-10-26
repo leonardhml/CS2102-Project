@@ -3,6 +3,7 @@ session_start();
 ?>
 <!DOCTYPE html>
 <html>
+<?php include 'getRaised.php'; ?>
 <?php include 'layout/config.php'; ?>
 <?php include 'layout/layout-head.php'; ?>
 
@@ -22,11 +23,11 @@ while ($row = oci_fetch_array($project, OCI_BOTH)) {
     $desc = $row['DESCRIPTION'];
     $proposer = $row['PROPOSER'];
     $target = $row['TARGET'];
-    $raised = $row['RAISED'];
+    $raised = getRaised($title, $inCharge);
     $tag = $row['TAG'];
 }
 
-$sql = "SELECT avg(rating), count(rating) FROM p_vote WHERE p_title ='".$title."' AND p_in_charge='".$inCharge."' GROUP BY p_title, p_in_charge";
+$sql = "SELECT to_char(avg(rating), '0.99'), count(rating) FROM p_vote WHERE p_title ='".$title."' AND p_in_charge='".$inCharge."' GROUP BY p_title, p_in_charge";
 $project = oci_parse($dbh, $sql);
 oci_execute($project, OCI_DEFAULT);
 

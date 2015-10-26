@@ -36,9 +36,9 @@ function donate(){
    // echo $sql;
     $res = oci_parse($dbh, $sql);
     oci_execute($res, OCI_COMMIT_ON_SUCCESS);
-    $sql = "UPDATE proposed_project SET raised = raised + ".$amount." WHERE title = '".$projectTitle."' AND in_charge = '".$projectInCharge."'";
-    $res = oci_parse($dbh, $sql);
-    oci_execute($res, OCI_COMMIT_ON_SUCCESS);
+    //$sql = "UPDATE proposed_project SET raised = raised + ".$amount." WHERE title = '".$projectTitle."' AND in_charge = '".$projectInCharge."'";
+    //$res = oci_parse($dbh, $sql);
+    //oci_execute($res, OCI_COMMIT_ON_SUCCESS);
     oci_close($dbh);
     //  echo true;
 }
