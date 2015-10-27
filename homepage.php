@@ -16,7 +16,7 @@
             <li data-target="#main-slider" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-            <div style="background-image: url(img/slides/9.jpg)" class="item active">
+            <div style="background-image: url(img/slides/cf4.jpg)" class="item active">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
@@ -37,7 +37,7 @@
                 </div>
             </div>
             <!-- /.item-->
-            <div style="background-image: url(img/slides/7.jpg)" class="item">
+            <div style="background-image: url(img/slides/cf5.jpg)" class="item">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
@@ -51,7 +51,7 @@
                 </div>
             </div>
             <!-- /.item-->
-            <div style="background-image: url(img/slides/8.jpg)" class="item">
+            <div style="background-image: url(img/slides/cf6.jpg)" class="item">
                 <div class="container">
                     <div class="row">
                         <div class="col-sm-12">
