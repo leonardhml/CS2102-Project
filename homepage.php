@@ -112,6 +112,7 @@
                 else:
                     $class = 'largest';
                 endif;
+
         ?>
         <span class="<?php echo $class; ?>">
             <a href="#"><?php echo $tag['TAG']; ?></a>

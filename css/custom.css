@@ -283,27 +283,27 @@
   padding: 4px;
 }
 
-#tagcloud .smallest {
+#tagcloud .smallest a {
   font-size: x-small;
   color: #bccf02;
 }
 
-#tagcloud .small {
+#tagcloud .small a {
   font-size: small;
   color: #eb65a0;
 }
 
-#tagcloud .medium {
+#tagcloud .medium a {
   font-size:medium;
   color: #5bb12f;
 }
 
-#tagcloud .large {
+#tagcloud .large a{
   font-size:large;
   color: #73c5e1;
 }
 
-#tagcloud .largest {
+#tagcloud .largest a{
   font-size:larger;
   color: #9b539c;
 }

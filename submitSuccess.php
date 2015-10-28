@@ -38,13 +38,12 @@ session_start();
         $tag = $_POST['tag'];
         $proposer = $_POST['proposer'];
         $propDate = $_POST['propDate'];
-        $raised = 0;
-        $sql = "INSERT INTO proposed_project VALUES ('".$title."', '".$inCharge."', TO_DATE('".$startDate."', 'YYYY-MM-DD'), TO_DATE('".$endDate."', 'YYYY-MM-DD'), TO_DATE('".$propDate."', 'DD/MON/YYYY'), '".$description."', '".$proposer."', ".$target.", ".$raised.", '".$tag."', '".$bankAcct."', 0)";
+        $sql = "INSERT INTO proposed_project VALUES ('".$title."', '".$inCharge."', TO_DATE('".$startDate."', 'YYYY-MM-DD'), TO_DATE('".$endDate."', 'YYYY-MM-DD'), TO_DATE('".$propDate."', 'DD/MON/YYYY'), '".$description."', '".$proposer."', ".$target.", '".$tag."', '".$bankAcct."', 0)";
 
         $res = oci_parse($dbh, $sql);
         if (oci_execute($res, OCI_COMMIT_ON_SUCCESS)) {
             oci_close($dbh);
-            echo "<p>Your project was uploaded successfully.</p><img";
+            echo "<p>Your project was uploaded successfully.</p>";
         } else {
             oci_close($dbh);
             echo "<p>Error! Your project could not be uploaded.</p>";
