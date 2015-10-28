@@ -72,86 +72,51 @@
 <!-- /#main-slider-->
 <section>
     <div id="tagcloud">
-        <div style="width: 400px;">
-            <?php
-              
-                //include("TagManager.class.php");
-                // prepare the tag cloud array for display
+        <?php
 
-                $sql = "SELECT tag, COUNT(*) AS count FROM proposed_project GROUP BY tag";
-                $res = oci_parse($dbh, $sql);
-                oci_execute($res, OCI_DEFAULT);
-                $tags = array(); // create empty array
-                $maximum = 0; // $maximum is the highest counter for a search term
+            $sql = "SELECT tag, COUNT(*) AS count FROM proposed_project GROUP BY tag";
+            $res = oci_parse($dbh, $sql);
+            oci_execute($res, OCI_DEFAULT);
+            $tags = array(); // create empty array
+            $maximum = 0; // $maximum is the highest counter for a search term
 
-                //$row_array = array();
-                while ($row = oci_fetch_array($res)) {
-                    $row_array['TAG']= $row['TAG'];
-                    $row_array['COUNT'] = $row['COUNT'];
+            //$row_array = array();
+            while ($row = oci_fetch_array($res)) {
+                $row_array['TAG']= $row['TAG'];
+                $row_array['COUNT'] = $row['COUNT'];
 
-                    // update $maximum if this term is more popular than the previous terms
-                    if ($row_array['COUNT'] > $maximum) $maximum = $row_array['COUNT'];
+                // update $maximum if this term is more popular than the previous terms
+                if ($row_array['COUNT'] > $maximum) $maximum = $row_array['COUNT'];
 
-                    //$tags[] = array('TAG' => $tag, 'COUNT' => $counter);
-                    array_push($tags, $row_array);
-                }
+                //$tags[] = array('TAG' => $tag, 'COUNT' => $counter);
+                array_push($tags, $row_array);
+            }
 
-                // shuffle terms unless you want to retain the order of highest to lowest
-                shuffle($tags); 
+            // shuffle terms unless you want to retain the order of highest to lowest
+            shuffle($tags); 
 
+            // start looping through the tags
+            foreach ($tags as $tag):
+                // determine the popularity of this term as a percentage
+                $percent = floor(($tag['COUNT'] / $maximum) * 100);
 
-/*                $tags = new TagManager();
-                
-                $maxCount = NULL;
-                $minCount = NULL;
-                foreach($tags as $tag)
-                {
-                  $maxCount = ($tag->Count > $maxCount) ? $tag->Count : $maxCount;
-                  $minCount = ($tag->Count < $minCount || $minCount == NULL) ? $tag->Count: $minCount;
-                }*/
-                
-/*                foreach($tags as $tag)
-                {
-                  if($tag->Count == $maxCount) $class = 'largeTag';
-                  else if($tag->Count >= ($maxCount/3)) $class = 'mediumTag';
-                  else $class = 'smallTag';
-                    echo '<span class="'. $class .'">
-                        <a href="#">'. $tag->name .'</a>
-                       </span>';
-                }*/
-
-/*                foreach($tags as $tag) {
-                    if($tag->count == $maxCount) $class = ’largeTag’;
-                    else if($tag->count >= ($maxCount/3)) $class = ’mediumTag’;
-                    else $class = ’smallTag’;
-                    echo ’<span class="’. $class .’">
-
-                        <a href="#">’. $tag->name .’</a>
-                    </span>’;
-                }*/
-                // start looping through the tags
-                foreach ($tags as $tag):
-                    // determine the popularity of this term as a percentage
-                    $percent = floor(($tag['COUNT'] / $maximum) * 100);
-
-                    // determine the class for this term based on the percentage
-                    if ($percent < 20):
-                        $class = 'smallest';
-                    elseif ($percent >= 20 and $percent < 40):
-                        $class = 'small';
-                    elseif ($percent >= 40 and $percent < 60):
-                        $class = 'medium';
-                    elseif ($percent >= 60 and $percent < 80):
-                        $class = 'large';
-                    else:
-                        $class = 'largest';
-                    endif;
-            ?>
-            <span class="<?php echo $class; ?>">
-                <a href="#"><?php echo $tag['TAG']; ?></a>
-            </span>
-            <?php endforeach; ?>
-        </div>
+                // determine the class for this term based on the percentage
+                if ($percent < 20):
+                    $class = 'smallest';
+                elseif ($percent >= 20 and $percent < 40):
+                    $class = 'small';
+                elseif ($percent >= 40 and $percent < 60):
+                    $class = 'medium';
+                elseif ($percent >= 60 and $percent < 80):
+                    $class = 'large';
+                else:
+                    $class = 'largest';
+                endif;
+        ?>
+        <span class="<?php echo $class; ?>">
+            <a href="#"><?php echo $tag['TAG']; ?></a>
+        </span>
+        <?php endforeach; ?>
     </div>
 </section>
 

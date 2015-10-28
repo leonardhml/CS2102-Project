@@ -6,21 +6,35 @@
 	background:#9B539C;
   color: #73c5e1;
 }
+
+.navbar-header {
+  background:#9B539C;
+  color: #73c5e1;
+}
+
+.navbar-fixed-top {
+  background:#9B539C;
+  color: #73c5e1;
+}
 @media(min-width:400px) {
     .navbar {
         padding: 5px 0;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
+        background:#9B539C;
+        color: #73c5e1;
     }
 	
     .top-nav-collapse {
         padding: 0;
+        background:#9B539C;
+        color: #73c5e1;
     }
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #eb65a0;
+    background-color: #5bb12f;
     color: #73c5e1;
 }
 
@@ -241,14 +255,15 @@
 
 .navbar-brand {
   padding: 10px;
+  background:#9B539C;
+  color: #73c5e1;
 }
 
 #tagcloud {
-  width: 300px;
-  background:#CFE3FF;
-  color:#0066FF;
+  width: 600px;
+  background:transparent;
   padding: 10px;
-  border: 1px solid #559DFF;
+  border: transparent;
   text-align:center;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -257,7 +272,7 @@
 
 #tagcloud a:link, #tagcloud a:visited {
   text-decoration:none;
-  color: #333;
+  color: #B9E2F0;
 }
 
 #tagcloud a:hover {
@@ -270,20 +285,25 @@
 
 #tagcloud .smallest {
   font-size: x-small;
+  color: #bccf02;
 }
 
 #tagcloud .small {
   font-size: small;
+  color: #eb65a0;
 }
 
 #tagcloud .medium {
   font-size:medium;
+  color: #5bb12f;
 }
 
 #tagcloud .large {
   font-size:large;
+  color: #73c5e1;
 }
 
 #tagcloud .largest {
   font-size:larger;
+  color: #9b539c;
 }

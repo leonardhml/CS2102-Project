@@ -17,7 +17,7 @@
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="footer-copyright">Copyright © 2015 Aether. All rights reserved. <a href="PrivacyPolicy">Privacy Policy</a><span>. </span><a href="Terms">Terms of Use </a><span>.</span></div>
+                <div class="footer-copyright">Copyright © 2015 SteFund. All rights reserved. <a href="PrivacyPolicy">Privacy Policy</a><span>. </span><a href="Terms">Terms of Use </a><span>.</span></div>
             </div>
         </div>
     </div>
