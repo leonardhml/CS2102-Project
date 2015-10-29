@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-header">
             <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="homepage.php" class="navbar-brand"><img src="img/steph0001.gif" alt="Aether"><span> SteFund: Where your Dreams Come True</span></a>
+                <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="homepage.php" class="navbar-brand"><img src="img/stefund.jpeg" alt="Stefund"><span> SteFund: Where your Dreams Come True</span></a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav navbar-right">

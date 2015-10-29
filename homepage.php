@@ -27,7 +27,7 @@
                                     <form action="projects.php" method="POST" class="form-dest">
                                         <div class="form-group">
                                             <input id="destinput" type="text" value="" name="projTitle" placeholder="Search for a Project" autofocus="autofocus" class="form-control col-md-10 home-input"/>
-                                            <button type="submit" class="btn btn-primary btn-wm col-md-2 pull-right">Enter</button>
+                                            <button type="submit" class="btn btn-lg btn-primary col-md-2 pull-right white">ENTER</button>
                                         </div>
                                     </form>
                                 </div>
@@ -43,7 +43,6 @@
                         <div class="col-sm-12">
                             <div class="carousel-content center centered">
                                 <h2 class="animation animated-item-1">Just Do It</h2>
-                                <p class="animation animated-item-1">Make Your Dreams Come True</p>
                                 <br/><a href="/Comparison" class="btn btn-md animation animated-item-3">Learn More</a>
                             </div>
                         </div>
@@ -72,52 +71,56 @@
 <!-- /#main-slider-->
 <section>
     <div id="tagcloud">
-        <?php
+        <div class="container">
+            <div class="col-md-4 col-md-offset-4">
+                <?php
 
-            $sql = "SELECT tag, COUNT(*) AS count FROM proposed_project GROUP BY tag";
-            $res = oci_parse($dbh, $sql);
-            oci_execute($res, OCI_DEFAULT);
-            $tags = array(); // create empty array
-            $maximum = 0; // $maximum is the highest counter for a search term
+                    $sql = "SELECT tag, COUNT(*) AS count FROM proposed_project GROUP BY tag";
+                    $res = oci_parse($dbh, $sql);
+                    oci_execute($res, OCI_DEFAULT);
+                    $tags = array(); // create empty array
+                    $maximum = 0; // $maximum is the highest counter for a search term
 
-            //$row_array = array();
-            while ($row = oci_fetch_array($res)) {
-                $row_array['TAG']= $row['TAG'];
-                $row_array['COUNT'] = $row['COUNT'];
+                    //$row_array = array();
+                    while ($row = oci_fetch_array($res)) {
+                        $row_array['TAG']= $row['TAG'];
+                        $row_array['COUNT'] = $row['COUNT'];
 
-                // update $maximum if this term is more popular than the previous terms
-                if ($row_array['COUNT'] > $maximum) $maximum = $row_array['COUNT'];
+                        // update $maximum if this term is more popular than the previous terms
+                        if ($row_array['COUNT'] > $maximum) $maximum = $row_array['COUNT'];
 
-                //$tags[] = array('TAG' => $tag, 'COUNT' => $counter);
-                array_push($tags, $row_array);
-            }
+                        //$tags[] = array('TAG' => $tag, 'COUNT' => $counter);
+                        array_push($tags, $row_array);
+                    }
 
-            // shuffle terms unless you want to retain the order of highest to lowest
-            shuffle($tags); 
+                    // shuffle terms unless you want to retain the order of highest to lowest
+                    shuffle($tags); 
 
-            // start looping through the tags
-            foreach ($tags as $tag):
-                // determine the popularity of this term as a percentage
-                $percent = floor(($tag['COUNT'] / $maximum) * 100);
+                    // start looping through the tags
+                    foreach ($tags as $tag):
+                        // determine the popularity of this term as a percentage
+                        $percent = floor(($tag['COUNT'] / $maximum) * 100);
 
-                // determine the class for this term based on the percentage
-                if ($percent < 20):
-                    $class = 'smallest';
-                elseif ($percent >= 20 and $percent < 40):
-                    $class = 'small';
-                elseif ($percent >= 40 and $percent < 60):
-                    $class = 'medium';
-                elseif ($percent >= 60 and $percent < 80):
-                    $class = 'large';
-                else:
-                    $class = 'largest';
-                endif;
+                        // determine the class for this term based on the percentage
+                        if ($percent < 20):
+                            $class = 'smallest';
+                        elseif ($percent >= 20 and $percent < 40):
+                            $class = 'small';
+                        elseif ($percent >= 40 and $percent < 60):
+                            $class = 'medium';
+                        elseif ($percent >= 60 and $percent < 80):
+                            $class = 'large';
+                        else:
+                            $class = 'largest';
+                        endif;
 
-        ?>
-        <span class="<?php echo $class; ?>">
-            <a href="#"><?php echo $tag['TAG']; ?></a>
-        </span>
-        <?php endforeach; ?>
+                ?>
+                <span class="<?php echo $class; ?>">
+                    <a href="#"><?php echo $tag['TAG']; ?></a>
+                </span>
+                <?php endforeach; ?>
+            </div>
+        </div>
     </div>
 </section>
 

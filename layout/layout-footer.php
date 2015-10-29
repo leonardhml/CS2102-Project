@@ -12,7 +12,7 @@
             </div>
             <div class="col-footer col-md-4 col-xs-6">
                 <h3>About Us</h3>
-                <p>We provide premium airport transport service to SIA passengers to ensure smooth journeys from doorsteps to doorsteps.</p>
+                <p>We created this platform for aspiring entrepreneurs to raise money from the masses to turn their ideas into reality. Our website, Stefund, aims to be a one-stop shop for entrepreneurs to propose new projects, individuals or businesses to browse, support and fund verious projects, users to vote on their favourite projects,</p>
             </div>
         </div>
         <div class="row">

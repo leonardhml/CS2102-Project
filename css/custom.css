@@ -1,20 +1,20 @@
 .navbar-default {
-    background-color: #9B539C;
-    border-color: #73c5e1;
+    background-color: #3B3A36;
+    border-color: #3B3A36;
 }
 .navbar {
-	background:#9B539C;
-  color: #73c5e1;
+	background:#3B3A36;
+  color: #FFF;
 }
 
 .navbar-header {
-  background:#9B539C;
-  color: #73c5e1;
+  background:#3B3A36;
+  color: #FFF;
 }
 
 .navbar-fixed-top {
-  background:#9B539C;
-  color: #73c5e1;
+  background:#3B3A36;
+  color: #FFF;
 }
 @media(min-width:400px) {
     .navbar {
@@ -22,20 +22,20 @@
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
-        background:#9B539C;
-        color: #73c5e1;
+        background:#3B3A36;
+        color: #FFF;
     }
 	
     .top-nav-collapse {
         padding: 0;
-        background:#9B539C;
-        color: #73c5e1;
+        background:#3B3A36;
+        color: #FFF;
     }
 }
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-    background-color: #5bb12f;
-    color: #73c5e1;
+    background-color: #7D4627;
+    color: #FFF;
 }
 
 #main-slider {
@@ -45,34 +45,42 @@
 @media(max-width:500px) {
 #main-slider {
   margin-top:45px;
+  margin-bottom: 80px;
 }
 }
 #main-slider .carousel h2 {
   font-size: 72px;
   line-height:70px;
-  color:#bccf02;
+  color:#7D4627;
   text-transform:uppercase;
   margin-top:20%;
   font-weight:700;
-  padding-left:0;
+  padding:5px 5px 5px 5px;
+  border: #E9ECE5;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  background-color: #E9ECE5;
+  display: inline-block;
 }
 #main-slider .carousel h3 {
   font-size: 72px;
   line-height:70px;
-  color:#eb65a0;
+  color:#3B3A36;
   text-transform:uppercase;
   margin-top:0%;
   font-weight:700;
+  background-color: #E9ECE5;
+
  }
 #main-slider .carousel p {
   font-size: 24px;
   line-height:28px;
-  color:#eb65a0;
+  color:#3B3A36;
   font-weight:400;
   padding-left:0;
 }
 #main-slider .carousel .btn {
-  color: #eb65a0;
   border-radius: 0;
   margin-top: 5px;
 }
@@ -174,7 +182,7 @@
 	#main-slider .carousel h2 {
 	  font-size: 42px;
 	  line-height:36px;
-	  color:#bccf02;
+	  color:#7D4627;
 	  text-transform:uppercase;
 	  margin-top:30%;
 	  font-weight:700;
@@ -255,12 +263,12 @@
 
 .navbar-brand {
   padding: 10px;
-  background:#9B539C;
-  color: #73c5e1;
+  background:#3B3A36;
+  color: #FFF;
 }
 
 #tagcloud {
-  width: 600px;
+  width: 1000px;
   background:transparent;
   padding: 10px;
   border: transparent;
@@ -268,42 +276,51 @@
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
+  margin-top: 20px;
 }
 
 #tagcloud a:link, #tagcloud a:visited {
   text-decoration:none;
-  color: #B9E2F0;
+  color: #3B3A36;
 }
 
 #tagcloud a:hover {
-  text-decoration: underline;
+  text-transform: uppercase;
 }
 
 #tagcloud span {
-  padding: 4px;
+  padding: 10px;
 }
 
 #tagcloud .smallest a {
   font-size: x-small;
-  color: #bccf02;
+  font-style: bold;
+  color: #3B3A36;
 }
 
 #tagcloud .small a {
-  font-size: small;
-  color: #eb65a0;
+  font-size: 30px;
+  font-style: bold;
+  color: #B4BEC3;
 }
 
 #tagcloud .medium a {
-  font-size:medium;
-  color: #5bb12f;
+  font-size:40px;
+  font-style: bold;
+  color: #3B3A36;
+  line-height: 40px;
 }
 
 #tagcloud .large a{
-  font-size:large;
-  color: #73c5e1;
+  font-size:60px;
+  font-style: bold;
+  color: #B4BEC3;
+  line-height: 60px;
 }
 
 #tagcloud .largest a{
-  font-size:larger;
-  color: #9b539c;
+  font-size:80px;
+  font-style: bold;
+  color: #7D4627;
+  line-height: 60px;
 }
