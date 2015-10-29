@@ -34,7 +34,13 @@ function get_projects(){
                 )');
 
     $projectTitle = $_POST["projTitle"];
-    $sql = "SELECT * FROM proposed_project WHERE title LIKE '%".$projectTitle."%'";
+    $isFromTagCloud = isset($_POST["fromTagCloud"]);
+    if ($isFromTagCloud) {
+        $tag = $_POST['tagFromTagCloud'];
+        $sql = "SELECT * FROM proposed_project WHERE tag = '".$tag."'";
+    } else {
+        $sql = "SELECT * FROM proposed_project WHERE title LIKE '%" . $projectTitle . "%'";
+    }
    // echo $sql;
     $res = oci_parse($dbh, $sql);
     oci_execute($res, OCI_DEFAULT);

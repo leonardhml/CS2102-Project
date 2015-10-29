@@ -72,7 +72,7 @@
 <section>
     <div id="tagcloud">
         <div class="container">
-            <div class="col-md-4 col-md-offset-4">
+            <div class="col-md-12 col-md-offset-4">
                 <?php
 
                     $sql = "SELECT tag, COUNT(*) AS count FROM proposed_project GROUP BY tag";
@@ -94,7 +94,7 @@
                     }
 
                     // shuffle terms unless you want to retain the order of highest to lowest
-                    shuffle($tags); 
+                    shuffle($tags);
 
                     // start looping through the tags
                     foreach ($tags as $tag):
@@ -116,7 +116,7 @@
 
                 ?>
                 <span class="<?php echo $class; ?>">
-                    <a href="#"><?php echo $tag['TAG']; ?></a>
+                    <a href="projects.php?fromTagCloud=1&tagFromTagCloud=<?php echo $tag['TAG'];?>"><?php echo $tag['TAG']; ?></a>
                 </span>
                 <?php endforeach; ?>
             </div>

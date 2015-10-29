@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="13f67720-2914-4efc-ba6a-1df429d55462" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.css" afterPath="$PROJECT_DIR$/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/getProjectsJSON.php" afterPath="$PROJECT_DIR$/getProjectsJSON.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/homepage.php" afterPath="$PROJECT_DIR$/homepage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/submitSuccess.php" afterPath="$PROJECT_DIR$/submitSuccess.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projects.php" afterPath="$PROJECT_DIR$/projects.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="CS2102-Project.iws" />
@@ -27,16 +28,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="homepage.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homepage.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/homepage.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.49385476">
-              <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.9615383">
+              <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
               <folding>
-                <marker date="1446006272906" expanded="true" signature="3769:3833" placeholder="SELECT tag, ..." />
-                <marker date="1446006272906" expanded="true" signature="6356:6443" placeholder="SELECT title..top_projects..." />
-                <marker date="1446006272906" expanded="true" signature="7925:8069" placeholder="SELECT m.nam..fund_record..." />
-                <marker date="1446006272906" expanded="true" signature="9415:9536" placeholder="SELECT m.nam..top_users..." />
+                <marker date="1446123196334" expanded="true" signature="3775:3839" placeholder="SELECT tag, ..." />
+                <marker date="1446123196334" expanded="true" signature="6303:6342" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="6303:6653" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="6344:6362" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="6413:6431" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="6491:6509" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="6562:6580" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="6685:6749" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="6751:6838" placeholder="SELECT title..top_projects..." />
+                <marker date="1446123196334" expanded="true" signature="7728:8829" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="7770:8829" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="7888:8829" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="7916:8234" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="7941:8205" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="7953:7971" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="8018:8036" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="8083:8101" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="8151:8169" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="8262:8829" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="8320:8464" placeholder="SELECT m.nam..fund_record..." />
+                <marker date="1446123196334" expanded="true" signature="9407:9724" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="9432:9695" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="9444:9462" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="9509:9527" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="9574:9592" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="9641:9659" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="9810:9931" placeholder="SELECT m.nam..top_users..." />
+                <marker date="1446123196334" expanded="true" signature="11025:11424" placeholder="..." />
+                <marker date="1446123196334" expanded="true" signature="11063:11390" placeholder="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projects.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/projects.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.35418993">
+              <caret line="141" column="74" selection-start-line="141" selection-start-column="74" selection-end-line="141" selection-end-column="74" />
+              <folding>
+                <marker date="1446124036159" expanded="true" signature="4804:4821" placeholder="SELECT * FRO..tag..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getProjectsJSON.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/getProjectsJSON.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.423077">
+              <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
+              <folding>
+                <marker date="1446121185784" expanded="true" signature="1230:1283" placeholder="SELECT * FRO..proposed_project..." />
+                <marker date="1446121185784" expanded="true" signature="1315:1388" placeholder="SELECT * FRO..proposed_project..." />
               </folding>
             </state>
           </provider>
@@ -46,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="292" column="7" selection-start-line="292" selection-start-column="7" selection-end-line="292" selection-end-column="7" />
+              <caret line="62" column="27" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -108,17 +159,17 @@
         <option value="$PROJECT_DIR$/layout/layout-head.php" />
         <option value="$PROJECT_DIR$/layout/layout-scripts.php" />
         <option value="$PROJECT_DIR$/getUsersJSONAdvanced.php" />
-        <option value="$PROJECT_DIR$/projects.php" />
         <option value="$PROJECT_DIR$/getRaised.php" />
-        <option value="$PROJECT_DIR$/getProjectsJSON.php" />
         <option value="$PROJECT_DIR$/getProjectsJSONAdvanced.php" />
         <option value="$PROJECT_DIR$/donate.php" />
         <option value="$PROJECT_DIR$/users.php" />
         <option value="$PROJECT_DIR$/userPage.php" />
         <option value="$PROJECT_DIR$/projectPage.php" />
         <option value="$PROJECT_DIR$/submitSuccess.php" />
+        <option value="$PROJECT_DIR$/getProjectsJSON.php" />
         <option value="$PROJECT_DIR$/homepage.php" />
         <option value="$PROJECT_DIR$/css/custom.css" />
+        <option value="$PROJECT_DIR$/projects.php" />
       </list>
     </option>
   </component>
@@ -178,7 +229,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -274,6 +324,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -395,9 +446,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <marker date="1445768130874" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tag..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -405,11 +454,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-          <folding>
-            <marker date="1445872462234" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..member..." />
-            <marker date="1445872462234" expanded="true" signature="-1:-1" placeholder="SELECT to_ch..m_vote..." />
-            <marker date="1445872462234" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..proposed_project..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -417,9 +462,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-          <folding>
-            <marker date="1445876354766" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -427,10 +470,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-          <folding>
-            <marker date="1445872499007" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..proposed_project..." />
-            <marker date="1445872499007" expanded="true" signature="-1:-1" placeholder="SELECT to_ch..p_vote..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -439,7 +479,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1445865631262" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tag..." />
+            <marker date="1446124036159" expanded="true" signature="4804:4821" placeholder="SELECT * FRO..tag..." />
           </folding>
         </state>
       </provider>
@@ -449,10 +489,35 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="198" column="25" selection-start-line="198" selection-start-column="25" selection-end-line="198" selection-end-column="25" />
           <folding>
-            <marker date="1446006272906" expanded="true" signature="3769:3833" placeholder="SELECT tag, ..." />
-            <marker date="1446006272906" expanded="true" signature="6356:6443" placeholder="SELECT title..top_projects..." />
-            <marker date="1446006272906" expanded="true" signature="7925:8069" placeholder="SELECT m.nam..fund_record..." />
-            <marker date="1446006272906" expanded="true" signature="9415:9536" placeholder="SELECT m.nam..top_users..." />
+            <marker date="1446123196334" expanded="true" signature="3775:3839" placeholder="SELECT tag, ..." />
+            <marker date="1446123196334" expanded="true" signature="6303:6342" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6303:6653" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6344:6362" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6413:6431" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6491:6509" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6562:6580" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6685:6749" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6751:6838" placeholder="SELECT title..top_projects..." />
+            <marker date="1446123196334" expanded="true" signature="7728:8829" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="7770:8829" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="7888:8829" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="7916:8234" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="7941:8205" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="7953:7971" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="8018:8036" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="8083:8101" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="8151:8169" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="8262:8829" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="8320:8464" placeholder="SELECT m.nam..fund_record..." />
+            <marker date="1446123196334" expanded="true" signature="9407:9724" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9432:9695" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9444:9462" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9509:9527" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9574:9592" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9641:9659" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9810:9931" placeholder="SELECT m.nam..top_users..." />
+            <marker date="1446123196334" expanded="true" signature="11025:11424" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="11063:11390" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -461,9 +526,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <marker date="1445768130874" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tag..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -471,11 +534,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-          <folding>
-            <marker date="1445872462234" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..member..." />
-            <marker date="1445872462234" expanded="true" signature="-1:-1" placeholder="SELECT to_ch..m_vote..." />
-            <marker date="1445872462234" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..proposed_project..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -483,9 +542,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
-          <folding>
-            <marker date="1445876354766" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -493,10 +550,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-          <folding>
-            <marker date="1445872499007" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..proposed_project..." />
-            <marker date="1445872499007" expanded="true" signature="-1:-1" placeholder="SELECT to_ch..p_vote..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -505,7 +559,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1445865631262" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tag..." />
+            <marker date="1446124036159" expanded="true" signature="4804:4821" placeholder="SELECT * FRO..tag..." />
           </folding>
         </state>
       </provider>
@@ -615,13 +669,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/getProjectsJSON.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.65810055">
-          <caret line="48" column="74" selection-start-line="48" selection-start-column="31" selection-end-line="48" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/donate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75977653">
@@ -671,13 +718,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/profile.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4373928">
-          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rate.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.516295">
@@ -724,10 +764,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
-          <folding>
-            <marker date="1445872499007" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..proposed_project..." />
-            <marker date="1445872499007" expanded="true" signature="-1:-1" placeholder="SELECT to_ch..p_vote..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -735,11 +772,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="43" selection-start-line="24" selection-start-column="43" selection-end-line="24" selection-end-column="43" />
-          <folding>
-            <marker date="1445872462234" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..member..." />
-            <marker date="1445872462234" expanded="true" signature="-1:-1" placeholder="SELECT to_ch..m_vote..." />
-            <marker date="1445872462234" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..proposed_project..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -747,9 +780,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <marker date="1445768130874" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tag..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -772,18 +803,56 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.5">
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
           <folding>
-            <marker date="1445876354766" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1445772400689" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..member..." />
+            <marker date="1445772400689" expanded="true" signature="-1:-1" placeholder="SELECT avg(r..m_vote..." />
+            <marker date="1445772400689" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..proposed_project..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/projects.php">
+    <entry file="file://$PROJECT_DIR$/homepage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="246" column="5" selection-start-line="246" selection-start-column="5" selection-end-line="246" selection-end-column="5" />
+        <state vertical-scroll-proportion="-6.9615383">
+          <caret line="74" column="33" selection-start-line="74" selection-start-column="33" selection-end-line="74" selection-end-column="33" />
           <folding>
-            <marker date="1445865631262" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..tag..." />
+            <marker date="1446123196334" expanded="true" signature="3775:3839" placeholder="SELECT tag, ..." />
+            <marker date="1446123196334" expanded="true" signature="6303:6342" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6303:6653" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6344:6362" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6413:6431" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6491:6509" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6562:6580" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6685:6749" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="6751:6838" placeholder="SELECT title..top_projects..." />
+            <marker date="1446123196334" expanded="true" signature="7728:8829" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="7770:8829" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="7888:8829" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="7916:8234" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="7941:8205" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="7953:7971" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="8018:8036" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="8083:8101" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="8151:8169" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="8262:8829" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="8320:8464" placeholder="SELECT m.nam..fund_record..." />
+            <marker date="1446123196334" expanded="true" signature="9407:9724" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9432:9695" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9444:9462" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9509:9527" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9574:9592" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9641:9659" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="9810:9931" placeholder="SELECT m.nam..top_users..." />
+            <marker date="1446123196334" expanded="true" signature="11025:11424" placeholder="..." />
+            <marker date="1446123196334" expanded="true" signature="11063:11390" placeholder="{...}" />
           </folding>
         </state>
       </provider>
@@ -791,20 +860,28 @@
     <entry file="file://$PROJECT_DIR$/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="292" column="7" selection-start-line="292" selection-start-column="7" selection-end-line="292" selection-end-column="7" />
+          <caret line="62" column="27" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/homepage.php">
+    <entry file="file://$PROJECT_DIR$/getProjectsJSON.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49385476">
-          <caret line="111" column="0" selection-start-line="111" selection-start-column="0" selection-end-line="111" selection-end-column="0" />
+        <state vertical-scroll-proportion="-17.423077">
+          <caret line="45" column="35" selection-start-line="45" selection-start-column="35" selection-end-line="45" selection-end-column="35" />
           <folding>
-            <marker date="1446006272906" expanded="true" signature="3769:3833" placeholder="SELECT tag, ..." />
-            <marker date="1446006272906" expanded="true" signature="6356:6443" placeholder="SELECT title..top_projects..." />
-            <marker date="1446006272906" expanded="true" signature="7925:8069" placeholder="SELECT m.nam..fund_record..." />
-            <marker date="1446006272906" expanded="true" signature="9415:9536" placeholder="SELECT m.nam..top_users..." />
+            <marker date="1446121185784" expanded="true" signature="1230:1283" placeholder="SELECT * FRO..proposed_project..." />
+            <marker date="1446121185784" expanded="true" signature="1315:1388" placeholder="SELECT * FRO..proposed_project..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projects.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35418993">
+          <caret line="141" column="74" selection-start-line="141" selection-start-column="74" selection-end-line="141" selection-end-column="74" />
+          <folding>
+            <marker date="1446124036159" expanded="true" signature="4804:4821" placeholder="SELECT * FRO..tag..." />
           </folding>
         </state>
       </provider>

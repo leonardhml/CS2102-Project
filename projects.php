@@ -138,10 +138,26 @@ session_start();
 </div>
 <script type="text/javascript">
     $("document").ready(function(event){
+
+        var isFromTagCloud = '<?php echo isset($_GET['fromTagCloud']); ?>';
+        if (isFromTagCloud) {
+            var tag = "<?php echo $_GET['tagFromTagCloud']; ?>";
+            $.post('getProjectsJSON.php', {fromTagCloud:true, tagFromTagCloud: tag}, function(data) {
+                var table = buildTable(data);
+
+                $("#projectsTable").html(
+                    table
+                );
+
+
+            });
+        }
+
         $("#test").click(function() {
             $("#fly").animate({left: "+=500", top: "+=250"}, 3000);
 
         });
+
         $("#simple").submit(function(){
             var dataString = $(this).serialize();
             $.post('getProjectsJSON.php', dataString, function(data) {
@@ -151,29 +167,6 @@ session_start();
                     table
                 );
 
-                function buildTable(data) {
-                  //  alert(data);
-                    var dataJSON = jQuery.parseJSON(data);
-                    var tmp = "<thead><tr>";
-                    for (var header in dataJSON[0] ) {
-                        tmp = tmp + "<th>" + header + "</th>";
-                    }
-                    tmp = tmp + "<th>View</th>";
-                    tmp = tmp + "</tr></thead>";
-                    tmp = tmp + "<tbody>";
-                    for (var i = 0; i<dataJSON.length;i++) {
-                        var obj = dataJSON[i];
-                        tmp = tmp + "<tr id='row" + i + "'>";
-                        for(var header in obj) {
-                            tmp=tmp+"<td><input type='hidden' value='"+obj[header]+"' name='"+header+"'/> "+obj[header]+"</td>";
-                        }
-                        tmp = tmp + "<td><button onclick=\"submitRowAsForm('row"+i+"')\">View</button></td>";
-                        tmp = tmp + "</tr>";
-                    }
-                    tmp = tmp + "</tbody>";
-                 //   alert(tmp);
-                    return tmp;
-                }
 
             });
 
@@ -195,29 +188,7 @@ session_start();
                         table
                     );
 
-                    function buildTable(data) {
-                        //    alert(data);
-                        var dataJSON = jQuery.parseJSON(data);
-                        var tmp = "<thead><tr>";
-                        for (var header in dataJSON[0]) {
-                            tmp = tmp + "<th>" + header + "</th>";
-                        }
-                        tmp = tmp + "<th>View</th>";
-                        tmp = tmp + "</tr></thead>";
-                        tmp = tmp + "<tbody>";
-                        for (var i = 0; i < dataJSON.length; i++) {
-                            var obj = dataJSON[i];
-                            tmp = tmp + "<tr id='row" + i + "'>";
-                            for (var header in obj) {
-                                tmp = tmp + "<td><input type='hidden' value='" + obj[header] + "' name='" + header + "'/> " + obj[header] + "</td>";
-                            }
-                            tmp = tmp + "<td><button onclick=\"submitRowAsForm('row" + i + "')\">View</button></td>";
-                            tmp = tmp + "</tr>";
-                        }
-                        tmp = tmp + "</tbody>";
-                        //    alert(tmp);
-                        return tmp;
-                    }
+
 
                 });
 
@@ -244,6 +215,30 @@ session_start();
 
         });
         form.submit(); // NOW SUBMIT THE FORM THAT WE'VE JUST CREATED AND POPULATED
+    }
+
+    function buildTable(data) {
+        //  alert(data);
+        var dataJSON = jQuery.parseJSON(data);
+        var tmp = "<thead><tr>";
+        for (var header in dataJSON[0] ) {
+            tmp = tmp + "<th>" + header + "</th>";
+        }
+        tmp = tmp + "<th>View</th>";
+        tmp = tmp + "</tr></thead>";
+        tmp = tmp + "<tbody>";
+        for (var i = 0; i<dataJSON.length;i++) {
+            var obj = dataJSON[i];
+            tmp = tmp + "<tr id='row" + i + "'>";
+            for(var header in obj) {
+                tmp=tmp+"<td><input type='hidden' value='"+obj[header]+"' name='"+header+"'/> "+obj[header]+"</td>";
+            }
+            tmp = tmp + "<td><button onclick=\"submitRowAsForm('row"+i+"')\">View</button></td>";
+            tmp = tmp + "</tr>";
+        }
+        tmp = tmp + "</tbody>";
+        //   alert(tmp);
+        return tmp;
     }
 </script>
 <?php include 'layout/layout-footer.php'; ?>

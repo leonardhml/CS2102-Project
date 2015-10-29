@@ -295,13 +295,13 @@
 #tagcloud .smallest a {
   font-size: x-small;
   font-style: bold;
-  color: #3B3A36;
+  color: purple;
 }
 
 #tagcloud .small a {
   font-size: 30px;
   font-style: bold;
-  color: #B4BEC3;
+  color: #31b0d5;
 }
 
 #tagcloud .medium a {
@@ -311,14 +311,14 @@
   line-height: 40px;
 }
 
-#tagcloud .large a{
+#tagcloud .large a {
   font-size:60px;
   font-style: bold;
-  color: #B4BEC3;
+  color: #548291;
   line-height: 60px;
 }
 
-#tagcloud .largest a{
+#tagcloud .largest a {
   font-size:80px;
   font-style: bold;
   color: #7D4627;
