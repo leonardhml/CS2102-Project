@@ -72,7 +72,7 @@
 <section>
     <div id="tagcloud">
         <div class="container">
-            <div class="col-md-12 col-md-offset-4">
+            <div class="col-md-12">
                 <?php
 
                     $sql = "SELECT tag, COUNT(*) AS count FROM proposed_project GROUP BY tag";
